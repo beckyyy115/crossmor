@@ -1,13 +1,16 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ShoppingCart, Search, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, ShoppingCart, Search } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useScrollPosition } from '@/hooks/use-scroll-position';
 import { navItems } from '@/lib/data';
 import { useCart } from '@/state/cart';
+import { LanguageSwitcher } from '@/components/language-switcher';
 
 export function Navigation() {
+  const { t } = useTranslation();
   const { isScrolled } = useScrollPosition();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -39,11 +42,11 @@ export function Navigation() {
             <nav className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
                 <Link
-                  key={item.label}
+                  key={item.href}
                   to={item.href}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
-                  {item.label}
+                  {item.i18nKey ? t(`nav.${item.i18nKey}`) : item.label}
                 </Link>
               ))}
             </nav>
@@ -73,23 +76,18 @@ export function Navigation() {
                 </span>
               </Button>
 
-              <Button variant="ghost" size="sm" className="hidden md:flex items-center gap-1">
-                <Globe className="w-4 h-4" />
-                <span className="text-sm">EN</span>
-                <ChevronDown className="w-3 h-3" />
-              </Button>
+              <LanguageSwitcher />
 
               <Link to="/contact" className="hidden md:flex">
-                <Button variant="ghost" size="sm">Contact</Button>
+                <Button variant="ghost" size="sm">{t('common.contact')}</Button>
               </Link>
-
 
               <Link to="/store" className="hidden md:flex">
                 <Button
                   size="sm"
                   className="bg-gradient-primary hover:opacity-90 text-white border-0"
                 >
-                  Sign up
+                  {t('common.signUp')}
                 </Button>
               </Link>
 
@@ -128,24 +126,24 @@ export function Navigation() {
                     transition={{ delay: index * 0.1 }}
                     className="text-lg font-medium text-foreground py-2"
                   >
-                    <Link
-                      to={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block"
-                    >
-                      {item.label}
-                    </Link>
+                <Link
+                  to={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block"
+                >
+                  {item.i18nKey ? t(`nav.${item.i18nKey}`) : item.label}
+                </Link>
                   </motion.div>
                 ))}
               </nav>
 
               <div className="mt-8 flex flex-col gap-3">
                 <Link to="/contact" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button variant="outline" className="w-full">Contact</Button>
+                  <Button variant="outline" className="w-full">{t('common.contact')}</Button>
                 </Link>
 
                 <Link to="/store" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button className="w-full bg-gradient-primary text-white border-0">Sign up</Button>
+                  <Button className="w-full bg-gradient-primary text-white border-0">{t('common.signUp')}</Button>
                 </Link>
               </div>
             </div>

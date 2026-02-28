@@ -1,0 +1,26 @@
+{
+  "nav": { "aiTools": "AI Tools VIP", "streaming": "สตรีมมิ่งและบัตร", "deals": "ดีล" },
+  "common": {
+    "contact": "ติดต่อ",
+    "signUp": "สมัคร",
+    "cart": "ตะกร้า",
+    "back": "กลับ",
+    "add": "เพิ่ม",
+    "viewCart": "ดูตะกร้า",
+    "continueShopping": "ช้อปต่อ",
+    "browseStore": "เลือกสินค้า",
+    "orderSummary": "สรุปคำสั่งซื้อ",
+    "subtotal": "ยอดย่อย",
+    "total": "รวม",
+    "trackOrder": "ติดตามคำสั่งซื้อ",
+    "orderId": "เลขที่คำสั่งซื้อ"
+  },
+  "hero": {
+    "headline": "ดิจิทัลโกลบอล ",
+    "highlight": "ชำระเงินท้องถิ่น",
+    "headlineAfter": "",
+    "ctaPrimary": "ดู AI Tools",
+    "ctaSecondary": "สตรีมมิ่งและบัตร"
+  },
+  "footer": {}
+}

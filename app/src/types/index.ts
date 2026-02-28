@@ -53,5 +53,7 @@ export interface CartItem {
 export interface NavItem {
   label: string;
   href: string;
+  /** 用于 i18n 的 key，如 nav.aiTools */
+  i18nKey?: string;
   children?: NavItem[];
 }

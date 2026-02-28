@@ -1,0 +1,26 @@
+{
+  "nav": { "aiTools": "AIツール VIP", "streaming": "ストリーミング＆ギフトカード", "deals": "お得" },
+  "common": {
+    "contact": "お問い合わせ",
+    "signUp": "登録",
+    "cart": "カート",
+    "back": "戻る",
+    "add": "追加",
+    "viewCart": "カートを見る",
+    "continueShopping": "買い物を続ける",
+    "browseStore": "ストアを見る",
+    "orderSummary": "注文概要",
+    "subtotal": "小計",
+    "total": "合計",
+    "trackOrder": "注文を追跡",
+    "orderId": "注文ID"
+  },
+  "hero": {
+    "headline": "グローバルなデジタル商品、",
+    "highlight": "現地通貨でお支払い",
+    "headlineAfter": "",
+    "ctaPrimary": "AIツールを見る",
+    "ctaSecondary": "ストリーミング＆カード"
+  },
+  "footer": {}
+}

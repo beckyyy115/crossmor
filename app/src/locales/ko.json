@@ -1,0 +1,26 @@
+{
+  "nav": { "aiTools": "AI 도구 VIP", "streaming": "스트리밍 및 기프트카드", "deals": "딜" },
+  "common": {
+    "contact": "문의",
+    "signUp": "가입",
+    "cart": "장바구니",
+    "back": "뒤로",
+    "add": "추가",
+    "viewCart": "장바구니 보기",
+    "continueShopping": "쇼핑 계속",
+    "browseStore": "스토어 둘러보기",
+    "orderSummary": "주문 요약",
+    "subtotal": "소계",
+    "total": "합계",
+    "trackOrder": "주문 조회",
+    "orderId": "주문 ID"
+  },
+  "hero": {
+    "headline": "글로벌 디지털 상품, ",
+    "highlight": "현지 결제",
+    "headlineAfter": "",
+    "ctaPrimary": "AI 도구 보기",
+    "ctaSecondary": "스트리밍 및 카드"
+  },
+  "footer": {}
+}

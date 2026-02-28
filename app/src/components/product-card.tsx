@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Star, Zap, ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import type { Product } from '@/types';
 import { useCart } from '@/state/cart';
+import { useCurrency } from '@/hooks/use-currency';
 import { toast } from 'sonner';
 
 interface ProductCardProps {
@@ -13,7 +15,9 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, index = 0 }: ProductCardProps) {
+  const { t } = useTranslation();
   const { addItem } = useCart();
+  const { formatPrice } = useCurrency();
 
   return (
     <motion.div
@@ -82,18 +86,18 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
           <div>
             <div className="flex items-center gap-2">
               <span className="text-xl font-bold text-foreground font-mono">
-                ${product.price.toFixed(2)}
+                {formatPrice(product.price)}
               </span>
               {product.originalPrice && (
                 <span className="text-sm text-muted-foreground line-through">
-                  ${product.originalPrice.toFixed(2)}
+                  {formatPrice(product.originalPrice)}
                 </span>
               )}
             </div>
             {product.instantDelivery && (
               <div className="flex items-center gap-1 mt-1">
                 <Zap className="w-3 h-3 text-cyan-400" />
-                <span className="text-xs text-cyan-400">Instant</span>
+                <span className="text-xs text-cyan-400">{t('common.instant')}</span>
               </div>
             )}
           </div>
@@ -105,11 +109,11 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
               e.preventDefault();
               e.stopPropagation();
               addItem(product, 1);
-              toast.success('Added to cart', { description: product.name });
+              toast.success(t('common.addedToCart'), { description: product.name });
             }}
           >
             <ShoppingCart className="w-4 h-4 mr-1" />
-            Add
+            {t('common.add')}
           </Button>
         </div>
       </div>

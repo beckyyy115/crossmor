@@ -1,24 +1,25 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Twitter, MessageCircle, Instagram, Linkedin } from 'lucide-react';
 
-const footerLinks = {
-  products: [
-    { label: 'AI Subscriptions', href: '/store/group/ai-tools' },
-    { label: 'Gift Cards', href: '/store/group/streaming' },
-    { label: 'Software Licenses', href: '/store/c/software' },
-  ],
-  support: [
-    { label: 'Help Center', href: '/help' },
-    { label: 'Contact Us', href: '/contact' },
-    { label: 'Track Order', href: '/track-order' },
-    { label: 'Refund Policy', href: '/refund-policy' },
-  ],
-  legal: [
-    { label: 'Terms of Service', href: '/legal/terms' },
-    { label: 'Privacy Policy', href: '/legal/privacy' },
-    { label: 'Cookie Policy', href: '/legal/cookies' },
-    { label: 'Compliance', href: '/compliance' },
-  ],
+const footerLinkKeys = {
+  products: ['aiSubscriptions', 'giftCards', 'softwareLicenses'] as const,
+  support: ['helpCenter', 'contactUs', 'trackOrder', 'refundPolicy'] as const,
+  legal: ['termsOfService', 'privacyPolicy', 'cookiePolicy', 'compliance'] as const,
+};
+
+const footerHrefs: Record<string, string> = {
+  aiSubscriptions: '/store/group/ai-tools',
+  giftCards: '/store/group/streaming',
+  softwareLicenses: '/store/c/software',
+  helpCenter: '/help',
+  contactUs: '/contact',
+  trackOrder: '/track-order',
+  refundPolicy: '/refund-policy',
+  termsOfService: '/legal/terms',
+  privacyPolicy: '/legal/privacy',
+  cookiePolicy: '/legal/cookies',
+  compliance: '/compliance',
 };
 
 const socialLinks = [
@@ -29,6 +30,7 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="bg-surface-1 border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -67,15 +69,15 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Products</h3>
+            <h3 className="font-semibold text-foreground mb-4">{t('footer.products')}</h3>
             <ul className="space-y-3">
-              {footerLinks.products.map((link) => (
-                <li key={link.label}>
+              {footerLinkKeys.products.map((key) => (
+                <li key={key}>
                   <a
-                    href={`#${link.href}`}
+                    href={`#${footerHrefs[key]}`}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
-                    {link.label}
+                    {t(`footer.${key}`)}
                   </a>
                 </li>
               ))}
@@ -84,15 +86,15 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Support</h3>
+            <h3 className="font-semibold text-foreground mb-4">{t('footer.support')}</h3>
             <ul className="space-y-3">
-              {footerLinks.support.map((link) => (
-                <li key={link.label}>
+              {footerLinkKeys.support.map((key) => (
+                <li key={key}>
                   <a
-                    href={`#${link.href}`}
+                    href={`#${footerHrefs[key]}`}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
-                    {link.label}
+                    {t(`footer.${key}`)}
                   </a>
                 </li>
               ))}
@@ -101,15 +103,15 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Legal</h3>
+            <h3 className="font-semibold text-foreground mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
+              {footerLinkKeys.legal.map((key) => (
+                <li key={key}>
                   <a
-                    href={`#${link.href}`}
+                    href={`#${footerHrefs[key]}`}
                     className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
-                    {link.label}
+                    {t(`footer.${key}`)}
                   </a>
                 </li>
               ))}

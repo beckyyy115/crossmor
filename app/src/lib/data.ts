@@ -1,9 +1,9 @@
 import type { Product, Category, Testimonial, PaymentMethod, NavItem, CategoryGroup } from '@/types';
 
 export const navItems: NavItem[] = [
-  { label: 'AI Tools VIP', href: '/store/group/ai-tools' },
-  { label: 'Streaming & Cards', href: '/store/group/streaming' },
-  { label: 'Deals', href: '/store' },
+  { label: 'AI Tools VIP', href: '/store/group/ai-tools', i18nKey: 'aiTools' },
+  { label: 'Streaming & Cards', href: '/store/group/streaming', i18nKey: 'streaming' },
+  { label: 'Deals', href: '/store', i18nKey: 'deals' },
 ];
 
 // AI Tools Categories

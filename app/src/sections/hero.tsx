@@ -1,15 +1,12 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, Shield, Zap, Clock, BadgeCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-const trustItems = [
-  { icon: Shield, text: 'Secure Payments' },
-  { icon: Zap, text: 'Instant Delivery' },
-  { icon: Clock, text: '24/7 Support' },
-  { icon: BadgeCheck, text: 'Money Back Guarantee' },
-];
+const trustItemKeys = ['securePayments', 'instantDelivery', 'support24', 'moneyBack'] as const;
+const trustIcons = [Shield, Zap, Clock, BadgeCheck];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,6 +32,7 @@ const itemVariants = {
 };
 
 export function Hero() {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-18">
       {/* Background */}
@@ -91,7 +89,7 @@ export function Hero() {
               className="mb-6 bg-surface-2/80 backdrop-blur-sm text-foreground border-border"
             >
               <span className="text-primary mr-2">★</span>
-              Trusted by 2M+ Users Worldwide
+              {t('common.trustedBadge')}
             </Badge>
           </motion.div>
 
@@ -100,9 +98,9 @@ export function Hero() {
             variants={itemVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight tracking-tight mb-6"
           >
-            Global Digital Goods,{' '}
-            <span className="text-gradient">Local Payment</span>{' '}
-            Convenience
+            {t('hero.headline')}
+            <span className="text-gradient">{t('hero.highlight')}</span>
+            {t('hero.headlineAfter')}
           </motion.h1>
 
           {/* Subheadline */}
@@ -110,8 +108,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
           >
-            CrossMor is your Merchant of Record for seamless AI subscriptions and digital goods. 
-            We handle payments, taxes, and compliance — you enjoy instant delivery.
+            {t('hero.subheadline')}
           </motion.p>
 
           {/* CTAs */}
@@ -122,7 +119,7 @@ export function Hero() {
               className="bg-gradient-primary hover:opacity-90 text-white border-0 text-base px-8 py-6 transition-all duration-300 hover:scale-105 hover:shadow-glow"
             >
               <Link to="/store/group/ai-tools" className="inline-flex items-center">
-                View AI Tools
+                {t('hero.ctaPrimary')}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
@@ -132,7 +129,7 @@ export function Hero() {
               variant="outline"
               className="border-border hover:bg-surface-2 text-base px-8 py-6 transition-all duration-300"
             >
-              <Link to="/store/group/streaming">Streaming & Cards</Link>
+              <Link to="/store/group/streaming">{t('hero.ctaSecondary')}</Link>
             </Button>
           </motion.div>
 
@@ -141,18 +138,21 @@ export function Hero() {
             variants={itemVariants}
             className="flex flex-wrap gap-6 sm:gap-8"
           >
-            {trustItems.map((item, index) => (
-              <motion.div
-                key={item.text}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 + index * 0.1 }}
-                className="flex items-center gap-2 text-sm text-muted-foreground"
-              >
-                <item.icon className="w-4 h-4 text-primary" />
-                <span>{item.text}</span>
-              </motion.div>
-            ))}
+            {trustItemKeys.map((key, index) => {
+              const Icon = trustIcons[index];
+              return (
+                <motion.div
+                  key={key}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 + index * 0.1 }}
+                  className="flex items-center gap-2 text-sm text-muted-foreground"
+                >
+                  <Icon className="w-4 h-4 text-primary" />
+                  <span>{t(`common.${key}`)}</span>
+                </motion.div>
+              );
+            })}
           </motion.div>
         </motion.div>
       </div>

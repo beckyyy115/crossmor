@@ -1,0 +1,26 @@
+{
+  "nav": { "aiTools": "AI Tools VIP", "streaming": "Streaming & Kad hadiah", "deals": "Tawaran" },
+  "common": {
+    "contact": "Hubungi",
+    "signUp": "Daftar",
+    "cart": "Troli",
+    "back": "Kembali",
+    "add": "Tambah",
+    "viewCart": "Lihat troli",
+    "continueShopping": "Terus membeli",
+    "browseStore": "Layari kedai",
+    "orderSummary": "Ringkasan pesanan",
+    "subtotal": "Jumlah kecil",
+    "total": "Jumlah",
+    "trackOrder": "Jejak pesanan",
+    "orderId": "ID pesanan"
+  },
+  "hero": {
+    "headline": "Barangan digital global, ",
+    "highlight": "pembayaran tempatan",
+    "headlineAfter": "",
+    "ctaPrimary": "Lihat AI Tools",
+    "ctaSecondary": "Streaming & Kad"
+  },
+  "footer": {}
+}

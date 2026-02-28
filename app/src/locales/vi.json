@@ -1,0 +1,26 @@
+{
+  "nav": { "aiTools": "AI Tools VIP", "streaming": "Streaming & Thẻ quà", "deals": "Ưu đãi" },
+  "common": {
+    "contact": "Liên hệ",
+    "signUp": "Đăng ký",
+    "cart": "Giỏ hàng",
+    "back": "Quay lại",
+    "add": "Thêm",
+    "viewCart": "Xem giỏ hàng",
+    "continueShopping": "Tiếp tục mua",
+    "browseStore": "Xem cửa hàng",
+    "orderSummary": "Tóm tắt đơn hàng",
+    "subtotal": "Tạm tính",
+    "total": "Tổng cộng",
+    "trackOrder": "Tra cứu đơn hàng",
+    "orderId": "Mã đơn hàng"
+  },
+  "hero": {
+    "headline": "Hàng kỹ thuật số toàn cầu, ",
+    "highlight": "thanh toán địa phương",
+    "headlineAfter": "",
+    "ctaPrimary": "Xem AI Tools",
+    "ctaSecondary": "Streaming & Thẻ quà"
+  },
+  "footer": {}
+}

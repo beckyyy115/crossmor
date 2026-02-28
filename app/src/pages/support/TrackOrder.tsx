@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useSearchParams } from 'react-router-dom';
 import { PackageSearch, ArrowRight, CheckCircle2, Clock, BadgeCheck } from 'lucide-react';
 
@@ -6,18 +7,23 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { getOrder, listOrders } from '@/lib/orders';
-
-const statusMeta = {
-  created: { icon: Clock, label: 'Created' },
-  paid: { icon: BadgeCheck, label: 'Paid' },
-  delivered: { icon: CheckCircle2, label: 'Delivered' },
-  refunded: { icon: CheckCircle2, label: 'Refunded' },
-} as const;
+import { formatPrice, formatAmount } from '@/lib/currency';
 
 export function TrackOrder() {
+  const { t } = useTranslation();
   const [params] = useSearchParams();
   const prefill = params.get('oid') ?? '';
   const [oid, setOid] = useState(prefill);
+
+  const statusMeta = useMemo(
+    () => ({
+      created: { icon: Clock, label: t('common.created') },
+      paid: { icon: BadgeCheck, label: t('common.paid') },
+      delivered: { icon: CheckCircle2, label: t('common.delivered') },
+      refunded: { icon: CheckCircle2, label: t('common.refunded') },
+    } as const),
+    [t]
+  );
 
   const order = useMemo(() => {
     const id = oid.trim();
@@ -34,10 +40,9 @@ export function TrackOrder() {
     <div className="pt-28 pb-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Track Order</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">{t('common.trackOrder')}</h1>
           <p className="text-muted-foreground">
-            Enter your order ID (e.g. <span className="font-mono">CM-20260220-AB12CD</span>). Demo orders are stored in your
-            browser.
+            {t('common.orderIdHint')}
           </p>
         </div>
 
@@ -47,12 +52,12 @@ export function TrackOrder() {
             <Input
               value={oid}
               onChange={(e) => setOid(e.target.value)}
-              placeholder="Order ID"
+              placeholder={t('common.orderId')}
               className="pl-9 bg-surface-1 border-border"
             />
           </div>
           <Button asChild className="bg-gradient-primary text-white border-0 hover:opacity-90">
-            <Link to="/help">Help</Link>
+            <Link to="/help">{t('common.help')}</Link>
           </Button>
         </div>
 
@@ -72,22 +77,22 @@ export function TrackOrder() {
               <CardContent>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <div className="text-muted-foreground">Created</div>
+                    <div className="text-muted-foreground">{t('common.created')}</div>
                     <div>{new Date(order.createdAt).toLocaleString()}</div>
                   </div>
                   <div>
-                    <div className="text-muted-foreground">Amount</div>
-                    <div className="font-semibold">{order.currency} {order.amount.toFixed(2)}</div>
+                    <div className="text-muted-foreground">{t('common.amount')}</div>
+                    <div className="font-semibold">{formatAmount(order.amount, order.currency)}</div>
                   </div>
                 </div>
 
                 <div className="mt-6">
-                  <div className="text-muted-foreground text-sm mb-2">Items</div>
+                  <div className="text-muted-foreground text-sm mb-2">{t('common.items')}</div>
                   <div className="space-y-2">
                     {order.items.map((it) => (
                       <div key={it.product.id} className="flex items-center justify-between text-sm">
                         <span>{it.quantity} × {it.product.name}</span>
-                        <span className="text-muted-foreground">${(it.product.price * it.quantity).toFixed(2)}</span>
+                        <span className="text-muted-foreground">{formatPrice(it.product.price * it.quantity, order.currency)}</span>
                       </div>
                     ))}
                   </div>
@@ -96,7 +101,7 @@ export function TrackOrder() {
                 <div className="flex flex-col sm:flex-row gap-3 mt-8">
                   <Button asChild className="bg-gradient-primary text-white border-0 hover:opacity-90">
                     <Link to="/store" className="inline-flex items-center">
-                      Shop more <ArrowRight className="w-4 h-4 ml-2" />
+                      {t('common.shopMore')} <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="border-border bg-background">
@@ -119,7 +124,7 @@ export function TrackOrder() {
 
         {recent.length > 0 && (
           <div className="mt-10">
-            <div className="text-sm text-muted-foreground mb-3">Recent demo orders</div>
+            <div className="text-sm text-muted-foreground mb-3">{t('common.recentOrders')}</div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {recent.map((o) => (
                 <Card key={o.id} className="bg-surface-1 border-border">

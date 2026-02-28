@@ -1,0 +1,26 @@
+{
+  "nav": { "aiTools": "AI Tools VIP", "streaming": "Streaming y tarjetas", "deals": "Ofertas" },
+  "common": {
+    "contact": "Contacto",
+    "signUp": "Registrarse",
+    "cart": "Carrito",
+    "back": "Volver",
+    "add": "Añadir",
+    "viewCart": "Ver carrito",
+    "continueShopping": "Seguir comprando",
+    "browseStore": "Explorar tienda",
+    "orderSummary": "Resumen del pedido",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "trackOrder": "Seguir pedido",
+    "orderId": "ID del pedido"
+  },
+  "hero": {
+    "headline": "Productos digitales globales, ",
+    "highlight": "pago local",
+    "headlineAfter": "",
+    "ctaPrimary": "Ver AI Tools",
+    "ctaSecondary": "Streaming y tarjetas"
+  },
+  "footer": {}
+}

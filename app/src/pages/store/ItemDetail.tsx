@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, ShieldCheck, Zap, Mail } from 'lucide-react';
 import { toast } from 'sonner';
@@ -9,13 +10,16 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
 import { useCart } from '@/state/cart';
+import { useCurrency } from '@/hooks/use-currency';
 import { allProducts, getProductById } from '@/lib/store';
 
 export function ItemDetail() {
+  const { t } = useTranslation();
   const { id } = useParams();
   const navigate = useNavigate();
   const product = id ? getProductById(id) : undefined;
   const { addItem } = useCart();
+  const { formatPrice } = useCurrency();
 
   const related = useMemo(() => {
     if (!product) return [];
@@ -40,10 +44,10 @@ export function ItemDetail() {
     return (
       <div className="pt-28 pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl font-bold mb-2">Item not found</h1>
-          <p className="text-muted-foreground mb-6">Please return to the store and choose another item.</p>
+          <h1 className="text-2xl font-bold mb-2">{t('common.itemNotFound')}</h1>
+          <p className="text-muted-foreground mb-6">{t('common.itemNotFoundHint')}</p>
           <Button asChild className="bg-gradient-primary text-white border-0">
-            <Link to="/store">Back to Store</Link>
+            <Link to="/store">{t('common.backToStore')}</Link>
           </Button>
         </div>
       </div>
@@ -55,10 +59,10 @@ export function ItemDetail() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4 mb-8">
           <Button variant="outline" className="border-border bg-surface-1" onClick={() => navigate(-1)}>
-            <ArrowLeft className="w-4 h-4 mr-2" /> Back
+            <ArrowLeft className="w-4 h-4 mr-2" /> {t('common.back')}
           </Button>
           <Button asChild className="bg-gradient-primary text-white border-0 hover:opacity-90">
-            <Link to="/cart">View Cart</Link>
+            <Link to="/cart">{t('common.viewCart')}</Link>
           </Button>
         </div>
 
@@ -73,7 +77,7 @@ export function ItemDetail() {
                 <Badge variant="secondary">{product.platform}</Badge>
                 <Badge variant="secondary">{product.region}</Badge>
                 {product.instantDelivery && (
-                  <Badge className="bg-primary/15 text-primary border border-primary/20">Instant delivery</Badge>
+                  <Badge className="bg-primary/15 text-primary border border-primary/20">{t('common.instantDeliveryBadge')}</Badge>
                 )}
               </div>
               <p className="text-sm text-muted-foreground mt-3">
@@ -93,25 +97,25 @@ export function ItemDetail() {
             <div className="bg-surface-1 border border-border rounded-2xl p-6">
               <div className="flex items-baseline justify-between gap-4">
                 <div>
-                  <div className="text-3xl font-bold">${product.price.toFixed(2)}</div>
+                  <div className="text-3xl font-bold">{formatPrice(product.price)}</div>
                   {product.originalPrice && (
-                    <div className="text-sm text-muted-foreground line-through">${product.originalPrice.toFixed(2)}</div>
+                    <div className="text-sm text-muted-foreground line-through">{formatPrice(product.originalPrice)}</div>
                   )}
                 </div>
-                <div className="text-sm text-muted-foreground">USD · Taxes may apply by region</div>
+                <div className="text-sm text-muted-foreground">{t('common.taxesByRegion')}</div>
               </div>
 
               <Separator className="my-6" />
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <div className="text-sm text-muted-foreground mb-2">Region</div>
+                  <div className="text-sm text-muted-foreground mb-2">{t('common.region')}</div>
                   <Select value={region} onValueChange={setRegion}>
                     <SelectTrigger className="bg-background border-border">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="auto">Auto (recommended)</SelectItem>
+                      <SelectItem value="auto">{t('common.autoRecommended')}</SelectItem>
                       {regionOptions.map((r) => (
                         <SelectItem key={r} value={r}>{r}</SelectItem>
                       ))}
@@ -120,7 +124,7 @@ export function ItemDetail() {
                 </div>
 
                 <div>
-                  <div className="text-sm text-muted-foreground mb-2">Quantity</div>
+                  <div className="text-sm text-muted-foreground mb-2">{t('common.qty')}</div>
                   <Input
                     type="number"
                     min={1}
@@ -133,7 +137,7 @@ export function ItemDetail() {
 
               <div className="mt-4">
                 <div className="text-sm text-muted-foreground mb-2 inline-flex items-center gap-2">
-                  <Mail className="w-4 h-4" /> Delivery email (optional)
+                  <Mail className="w-4 h-4" /> {t('common.deliveryEmail')}
                 </div>
                 <Input
                   value={email}
@@ -151,10 +155,10 @@ export function ItemDetail() {
                   className="bg-gradient-primary text-white border-0 hover:opacity-90"
                   onClick={() => {
                     addItem(product, qty);
-                    toast.success('Added to cart', { description: `${qty} × ${product.name}` });
+                    toast.success(t('common.addedToCart'), { description: `${qty} × ${product.name}` });
                   }}
                 >
-                  <Zap className="w-4 h-4 mr-2" /> Add to cart
+                  <Zap className="w-4 h-4 mr-2" /> {t('common.addToCart')}
                 </Button>
                 <Button asChild variant="outline" className="border-border bg-background">
                   <Link to="/contact">Talk to sales</Link>
