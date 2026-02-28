@@ -12,146 +12,135 @@ export function PrivacyPage() {
 
         <div className="bg-surface-1 border border-border rounded-2xl p-8 space-y-8 text-sm text-muted-foreground leading-relaxed">
           <section className="space-y-3">
-            <p>
-              Crossp Technology Limited and Superbo Information &amp; Technology Limited (“Crossmor,” “we,” “us,” or “our”) are
-              committed to protecting your privacy.
-            </p>
-            <p>
-              This Privacy Policy explains how we collect, use, disclose, and safeguard information in connection with our
-              Services.
-            </p>
+            <p>{t('privacy.intro1')}</p>
+            <p>{t('privacy.intro2')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">1. Information We Collect</div>
-            <p>We may collect:</p>
+            <div className="text-foreground font-semibold">{t('privacy.s1_title')}</div>
+            <p>{t('privacy.s1_weCollect')}</p>
 
             <div className="space-y-2">
-              <div className="text-foreground font-medium">A. Merchant Information</div>
+              <div className="text-foreground font-medium">{t('privacy.s1_merchant')}</div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Business registration details</li>
-                <li>Directors and beneficial owner information</li>
-                <li>Contact details</li>
-                <li>Bank account information</li>
+                <li>{t('privacy.s1_merchant_li1')}</li>
+                <li>{t('privacy.s1_merchant_li2')}</li>
+                <li>{t('privacy.s1_merchant_li3')}</li>
+                <li>{t('privacy.s1_merchant_li4')}</li>
               </ul>
             </div>
 
             <div className="space-y-2">
-              <div className="text-foreground font-medium">B. Transaction Information</div>
+              <div className="text-foreground font-medium">{t('privacy.s1_transaction')}</div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Customer name and email</li>
-                <li>Billing information</li>
-                <li>IP address</li>
-                <li>Device and transaction metadata</li>
+                <li>{t('privacy.s1_transaction_li1')}</li>
+                <li>{t('privacy.s1_transaction_li2')}</li>
+                <li>{t('privacy.s1_transaction_li3')}</li>
+                <li>{t('privacy.s1_transaction_li4')}</li>
               </ul>
             </div>
 
             <div className="space-y-2">
-              <div className="text-foreground font-medium">C. Automatically Collected Information</div>
+              <div className="text-foreground font-medium">{t('privacy.s1_auto')}</div>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Browser type</li>
-                <li>Operating system</li>
-                <li>Referring URLs</li>
-                <li>Cookies and analytics data</li>
+                <li>{t('privacy.s1_auto_li1')}</li>
+                <li>{t('privacy.s1_auto_li2')}</li>
+                <li>{t('privacy.s1_auto_li3')}</li>
+                <li>{t('privacy.s1_auto_li4')}</li>
               </ul>
             </div>
 
-            <p className="text-xs">
-              We do not store full payment card numbers unless required under PCI DSS standards and contractual obligations.
-            </p>
+            <p className="text-xs">{t('privacy.s1_pci')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">2. How We Use Information</div>
-            <p>We use the information we collect to:</p>
+            <div className="text-foreground font-semibold">{t('privacy.s2_title')}</div>
+            <p>{t('privacy.s2_weUse')}</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>Provide and maintain Services</li>
-              <li>Process transactions</li>
-              <li>Conduct fraud monitoring</li>
-              <li>Perform AML/KYC checks</li>
-              <li>Comply with regulatory obligations</li>
-              <li>Improve our platform</li>
-              <li>Communicate service updates</li>
+              <li>{t('privacy.s2_li1')}</li>
+              <li>{t('privacy.s2_li2')}</li>
+              <li>{t('privacy.s2_li3')}</li>
+              <li>{t('privacy.s2_li4')}</li>
+              <li>{t('privacy.s2_li5')}</li>
+              <li>{t('privacy.s2_li6')}</li>
+              <li>{t('privacy.s2_li7')}</li>
             </ul>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">3. Legal Basis (Where Applicable)</div>
-            <p>Where applicable, processing is based on:</p>
+            <div className="text-foreground font-semibold">{t('privacy.s3_title')}</div>
+            <p>{t('privacy.s3_basedOn')}</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>Contractual necessity</li>
-              <li>Legal obligations</li>
-              <li>Legitimate interests</li>
-              <li>Consent</li>
+              <li>{t('privacy.s3_li1')}</li>
+              <li>{t('privacy.s3_li2')}</li>
+              <li>{t('privacy.s3_li3')}</li>
+              <li>{t('privacy.s3_li4')}</li>
             </ul>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">4. Sharing of Information</div>
-            <p>We may share information with:</p>
+            <div className="text-foreground font-semibold">{t('privacy.s4_title')}</div>
+            <p>{t('privacy.s4_weShare')}</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>Banking partners</li>
-              <li>Card networks</li>
-              <li>Fraud detection providers</li>
-              <li>Regulatory authorities</li>
-              <li>Professional advisors</li>
+              <li>{t('privacy.s4_li1')}</li>
+              <li>{t('privacy.s4_li2')}</li>
+              <li>{t('privacy.s4_li3')}</li>
+              <li>{t('privacy.s4_li4')}</li>
+              <li>{t('privacy.s4_li5')}</li>
             </ul>
-            <p>We do not sell personal data.</p>
+            <p>{t('privacy.s4_noSell')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">5. Data Security</div>
-            <p>We implement administrative, technical, and physical safeguards including:</p>
+            <div className="text-foreground font-semibold">{t('privacy.s5_title')}</div>
+            <p>{t('privacy.s5_weImplement')}</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>PCI DSS standards</li>
-              <li>Encryption</li>
-              <li>Access controls</li>
-              <li>Monitoring systems</li>
+              <li>{t('privacy.s5_li1')}</li>
+              <li>{t('privacy.s5_li2')}</li>
+              <li>{t('privacy.s5_li3')}</li>
+              <li>{t('privacy.s5_li4')}</li>
             </ul>
-            <p>No system is 100% secure, but we take reasonable measures to protect data.</p>
+            <p>{t('privacy.s5_noSystem')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">6. Data Retention</div>
-            <p>We retain information:</p>
+            <div className="text-foreground font-semibold">{t('privacy.s6_title')}</div>
+            <p>{t('privacy.s6_weRetain')}</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>As long as necessary to provide Services</li>
-              <li>As required by financial regulations</li>
-              <li>To resolve disputes and enforce agreements</li>
+              <li>{t('privacy.s6_li1')}</li>
+              <li>{t('privacy.s6_li2')}</li>
+              <li>{t('privacy.s6_li3')}</li>
             </ul>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">7. International Transfers</div>
-            <p>
-              Information may be transferred across jurisdictions where our service providers operate. We implement safeguards
-              for international transfers where required.
-            </p>
+            <div className="text-foreground font-semibold">{t('privacy.s7_title')}</div>
+            <p>{t('privacy.s7_p1')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">8. Your Rights</div>
-            <p>Depending on your jurisdiction, you may have rights to:</p>
+            <div className="text-foreground font-semibold">{t('privacy.s8_title')}</div>
+            <p>{t('privacy.s8_depending')}</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>Access your data</li>
-              <li>Correct inaccuracies</li>
-              <li>Request deletion (subject to regulatory limits)</li>
-              <li>Object to certain processing</li>
+              <li>{t('privacy.s8_li1')}</li>
+              <li>{t('privacy.s8_li2')}</li>
+              <li>{t('privacy.s8_li3')}</li>
+              <li>{t('privacy.s8_li4')}</li>
             </ul>
             <p>
-              To exercise rights: <span className="text-foreground font-medium">service@crossmor.com</span>
+              {t('privacy.s8_toExercise')} <span className="text-foreground font-medium">{t('privacy.s9_email')}</span>
             </p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">9. Contact</div>
-            <p className="text-foreground font-medium">service@crossmor.com</p>
+            <div className="text-foreground font-semibold">{t('privacy.s9_title')}</div>
+            <p className="text-foreground font-medium">{t('privacy.s9_email')}</p>
           </section>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 mt-8">
           <Button asChild className="bg-gradient-primary text-white border-0 hover:opacity-90">
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">{t('privacy.contactBtn')}</Link>
           </Button>
         </div>
       </div>

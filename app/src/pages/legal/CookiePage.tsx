@@ -12,64 +12,62 @@ export function CookiePage() {
 
         <div className="bg-surface-1 border border-border rounded-2xl p-8 space-y-8 text-sm text-muted-foreground leading-relaxed">
           <section className="space-y-3">
-            <p>This Cookie Policy explains how Crossmor uses cookies and similar technologies.</p>
+            <p>{t('cookie.intro')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">1. What Are Cookies</div>
-            <p>Cookies are small text files stored on your device when you visit a website.</p>
+            <div className="text-foreground font-semibold">{t('cookie.s1_title')}</div>
+            <p>{t('cookie.s1_p')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">2. Types of Cookies We Use</div>
+            <div className="text-foreground font-semibold">{t('cookie.s2_title')}</div>
 
             <div className="space-y-2">
-              <div className="text-foreground font-medium">Essential Cookies</div>
-              <p>Necessary for website functionality.</p>
+              <div className="text-foreground font-medium">{t('cookie.s2_essential')}</div>
+              <p>{t('cookie.s2_essential_p')}</p>
             </div>
 
             <div className="space-y-2">
-              <div className="text-foreground font-medium">Performance Cookies</div>
-              <p>Help analyze traffic and usage patterns.</p>
+              <div className="text-foreground font-medium">{t('cookie.s2_performance')}</div>
+              <p>{t('cookie.s2_performance_p')}</p>
             </div>
 
             <div className="space-y-2">
-              <div className="text-foreground font-medium">Analytics Cookies</div>
-              <p>May include services such as Google Analytics.</p>
+              <div className="text-foreground font-medium">{t('cookie.s2_analytics')}</div>
+              <p>{t('cookie.s2_analytics_p')}</p>
             </div>
 
             <div className="space-y-2">
-              <div className="text-foreground font-medium">Functionality Cookies</div>
-              <p>Remember preferences such as language and region.</p>
+              <div className="text-foreground font-medium">{t('cookie.s2_functionality')}</div>
+              <p>{t('cookie.s2_functionality_p')}</p>
             </div>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">3. Third-Party Cookies</div>
-            <p>We may use trusted third-party analytics or infrastructure providers.</p>
+            <div className="text-foreground font-semibold">{t('cookie.s3_title')}</div>
+            <p>{t('cookie.s3_p')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">4. Managing Cookies</div>
-            <p>
-              You can manage cookies via your browser settings. Disabling cookies may limit certain functionality.
-            </p>
+            <div className="text-foreground font-semibold">{t('cookie.s4_title')}</div>
+            <p>{t('cookie.s4_p')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">5. Updates</div>
-            <p>We may update this Cookie Policy from time to time.</p>
+            <div className="text-foreground font-semibold">{t('cookie.s5_title')}</div>
+            <p>{t('cookie.s5_p')}</p>
           </section>
 
           <section className="space-y-3">
-            <div className="text-foreground font-semibold">6. Contact</div>
-            <p className="text-foreground font-medium">service@crossmor.com</p>
+            <div className="text-foreground font-semibold">{t('cookie.s6_title')}</div>
+            <p className="text-foreground font-medium">{t('cookie.s6_email')}</p>
           </section>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 mt-8">
           <Button asChild className="bg-gradient-primary text-white border-0 hover:opacity-90">
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">{t('cookie.contactBtn')}</Link>
           </Button>
         </div>
       </div>

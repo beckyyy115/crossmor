@@ -30,36 +30,35 @@ export function RefundPolicyPage() {
           <section>
             <h2 className="text-xl font-semibold mb-2">{t('refund.eligibleTitle')}</h2>
             <ul className="list-disc pl-5 text-muted-foreground space-y-1">
-              <li>Duplicate or accidental double charges</li>
-              <li>Code not delivered within the stated timeframe</li>
-              <li>Wrong region/product issued due to our error</li>
-              <li>Payment reversed by issuer (chargeback) — order will be cancelled</li>
+              <li>{t('refund.eligible1')}</li>
+              <li>{t('refund.eligible2')}</li>
+              <li>{t('refund.eligible3')}</li>
+              <li>{t('refund.eligible4')}</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold mb-2">{t('refund.notEligibleTitle')}</h2>
             <ul className="list-disc pl-5 text-muted-foreground space-y-1">
-              <li>Code delivered and redeemed successfully</li>
-              <li>Wrong purchase made by customer (e.g., wrong platform)</li>
-              <li>Account restrictions on the platform side</li>
+              <li>{t('refund.notEligible1')}</li>
+              <li>{t('refund.notEligible2')}</li>
+              <li>{t('refund.notEligible3')}</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold mb-2">{t('refund.howToTitle')}</h2>
             <p className="text-muted-foreground">
-              Contact support with your order ID, purchase email, and a screenshot (if relevant). We typically respond within
-              24 hours on business days.
+              {t('refund.howToDesc')}
             </p>
           </section>
 
           <div className="flex flex-col sm:flex-row gap-3">
             <Button asChild className="bg-gradient-primary text-white border-0 hover:opacity-90">
-              <Link to="/contact">Contact support</Link>
+              <Link to="/contact">{t('refund.contactSupportBtn')}</Link>
             </Button>
             <Button asChild variant="outline" className="border-border bg-background">
-              <Link to="/track-order">Track an order</Link>
+              <Link to="/track-order">{t('refund.trackOrderBtn')}</Link>
             </Button>
           </div>
         </div>

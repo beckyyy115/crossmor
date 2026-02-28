@@ -105,7 +105,7 @@ export function TrackOrder() {
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="border-border bg-background">
-                    <Link to="/contact">Contact support</Link>
+                    <Link to="/contact">{t('trackOrder.contactSupport')}</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -113,10 +113,10 @@ export function TrackOrder() {
           ) : (
             <Card className="bg-surface-1 border-border">
               <CardHeader>
-                <CardTitle>Not found</CardTitle>
+                <CardTitle>{t('trackOrder.notFound')}</CardTitle>
               </CardHeader>
               <CardContent className="text-muted-foreground">
-                If you just created a demo order, copy the ID from the confirmation toast or check “Recent demo orders” below.
+                {t('trackOrder.notFoundHint')}
               </CardContent>
             </Card>
           )}
@@ -134,7 +134,7 @@ export function TrackOrder() {
                       <div className="text-xs text-muted-foreground">{new Date(o.createdAt).toLocaleString()}</div>
                     </div>
                     <Button size="sm" variant="outline" className="border-border bg-background" onClick={() => setOid(o.id)}>
-                      View
+                      {t('trackOrder.view')}
                     </Button>
                   </CardContent>
                 </Card>

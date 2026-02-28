@@ -47,26 +47,26 @@ export function ComplianceCenter() {
         <div className="mt-12 bg-surface-1 border border-border rounded-2xl p-8">
           <h2 className="text-xl font-semibold mb-3">{t('compliance.dueDiligence')}</h2>
           <p className="text-muted-foreground mb-6">
-            If you’re evaluating CrossMor for a partnership, we can provide:
+            {t('compliance.dueDiligenceDesc')}
           </p>
           <ul className="list-disc pl-5 text-muted-foreground space-y-1">
-            <li>Entity details and supported geographies</li>
-            <li>Chargeback and refund workflows</li>
-            <li>Data processing terms and privacy policy</li>
-            <li>Operational playbooks (KYC/KYB, risk, delivery)</li>
+            <li>{t('compliance.dueDiligenceLi1')}</li>
+            <li>{t('compliance.dueDiligenceLi2')}</li>
+            <li>{t('compliance.dueDiligenceLi3')}</li>
+            <li>{t('compliance.dueDiligenceLi4')}</li>
           </ul>
 
           <div className="flex flex-col sm:flex-row gap-3 mt-8">
             <Button asChild className="bg-gradient-primary text-white border-0 hover:opacity-90">
               <Link to="/contact" className="inline-flex items-center">
-                Request docs <ArrowRight className="w-4 h-4 ml-2" />
+                {t('compliance.requestDocs')} <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
             <Button asChild variant="outline" className="border-border bg-background">
-              <Link to="/legal/privacy">Privacy</Link>
+              <Link to="/legal/privacy">{t('compliance.privacy')}</Link>
             </Button>
             <Button asChild variant="outline" className="border-border bg-background">
-              <Link to="/legal/terms">Terms</Link>
+              <Link to="/legal/terms">{t('compliance.terms')}</Link>
             </Button>
           </div>
         </div>
