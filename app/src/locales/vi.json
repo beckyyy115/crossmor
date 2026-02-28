@@ -1,5 +1,12 @@
 {
-  "nav": { "aiTools": "AI Tools VIP", "streaming": "Streaming & Thẻ quà", "deals": "Ưu đãi" },
+  "nav": {
+    "aiTools": "AI & Công cụ số",
+    "streaming": "Streaming & Giải trí",
+    "giftCards": "Thẻ quà & Ví",
+    "software": "Phần mềm & SaaS",
+    "regional": "Dịch vụ khu vực",
+    "deals": "Ưu đãi"
+  },
   "common": {
     "contact": "Liên hệ",
     "signUp": "Đăng ký",
@@ -13,14 +20,28 @@
     "subtotal": "Tạm tính",
     "total": "Tổng cộng",
     "trackOrder": "Tra cứu đơn hàng",
-    "orderId": "Mã đơn hàng"
+    "orderId": "Mã đơn hàng",
+    "trustedBadge": "Được hơn 2 triệu người dùng tin tưởng"
   },
   "hero": {
     "headline": "Hàng kỹ thuật số toàn cầu, ",
     "highlight": "thanh toán địa phương",
     "headlineAfter": "",
+    "subheadline": "CrossMor là Merchant of Record của bạn cho gói AI và hàng kỹ thuật số. Chúng tôi xử lý thanh toán, thuế và tuân thủ — bạn nhận hàng ngay.",
     "ctaPrimary": "Xem AI Tools",
-    "ctaSecondary": "Streaming & Thẻ quà"
+    "ctaSecondary": "Streaming & Thẻ quà",
+    "ctaExploreCategory": "Khám phá {{category}}",
+    "ctaBrowseDeals": "Xem ưu đãi"
+  },
+  "categories": {
+    "browseByCategory": "Duyệt theo danh mục",
+    "exploreRange": "Khám phá hàng kỹ thuật số của chúng tôi",
+    "viewAll": "Xem tất cả",
+    "subtitle_ai_digital_tools": "Gói AI và tín dụng API",
+    "subtitle_streaming_entertainment": "Gói streaming video và nhạc",
+    "subtitle_gift_cards_wallet": "Thẻ quà và ví trả trước",
+    "subtitle_software_saas": "Phần mềm năng suất và sáng tạo",
+    "subtitle_regional_services": "OTT địa phương, voucher streaming và ví"
   },
   "footer": {}
 }

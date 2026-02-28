@@ -1,5 +1,12 @@
 {
-  "nav": { "aiTools": "AI Tools VIP", "streaming": "Streaming & Kartu", "deals": "Penawaran" },
+  "nav": {
+    "aiTools": "AI & Alat Digital",
+    "streaming": "Streaming & Hiburan",
+    "giftCards": "Gift Card & Dompet",
+    "software": "Perangkat Lunak & SaaS",
+    "regional": "Layanan Regional",
+    "deals": "Penawaran"
+  },
   "common": {
     "contact": "Kontak",
     "signUp": "Daftar",
@@ -13,14 +20,28 @@
     "subtotal": "Subtotal",
     "total": "Total",
     "trackOrder": "Lacak pesanan",
-    "orderId": "ID pesanan"
+    "orderId": "ID pesanan",
+    "trustedBadge": "Dipercaya 2M+ pengguna global"
   },
   "hero": {
     "headline": "Produk digital global, ",
     "highlight": "pembayaran lokal",
     "headlineAfter": "",
+    "subheadline": "CrossMor adalah Merchant of Record Anda untuk langganan AI dan barang digital. Kami mengurus pembayaran, pajak, dan kepatuhan — Anda menikmati pengiriman instan.",
     "ctaPrimary": "Lihat AI Tools",
-    "ctaSecondary": "Streaming & Kartu"
+    "ctaSecondary": "Streaming & Kartu",
+    "ctaExploreCategory": "Jelajahi {{category}}",
+    "ctaBrowseDeals": "Lihat Penawaran"
+  },
+  "categories": {
+    "browseByCategory": "Jelajahi menurut kategori",
+    "exploreRange": "Jelajahi beragam barang digital kami",
+    "viewAll": "Lihat semua",
+    "subtitle_ai_digital_tools": "Langganan AI dan kredit API",
+    "subtitle_streaming_entertainment": "Langganan video dan musik",
+    "subtitle_gift_cards_wallet": "Gift card digital dan prabayar",
+    "subtitle_software_saas": "Perangkat lunak produktivitas dan kreatif",
+    "subtitle_regional_services": "OTT lokal, voucher streaming, dan dompet"
   },
   "footer": {}
 }

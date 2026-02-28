@@ -2,15 +2,18 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ShoppingCart, Search } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useScrollPosition } from '@/hooks/use-scroll-position';
 import { navItems } from '@/lib/data';
+import { getActiveCategoryIdFromPath, getCategoryIdFromHref } from '@/lib/nav-utils';
 import { useCart } from '@/state/cart';
 import { LanguageSwitcher } from '@/components/language-switcher';
 
 export function Navigation() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
+  const activeCategoryId = getActiveCategoryIdFromPath(pathname);
   const { isScrolled } = useScrollPosition();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -29,9 +32,9 @@ export function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-18 py-4">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-2">
+          <div className="flex items-center justify-between h-18 py-4 gap-4">
+            {/* Logo + spacing so first nav item has clear separation */}
+            <Link to="/" className="flex items-center gap-2 shrink-0 md:mr-8 lg:mr-10">
               <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
                 <span className="text-white font-bold text-lg">C</span>
               </div>
@@ -39,26 +42,33 @@ export function Navigation() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-                >
-                  {item.i18nKey ? t(`nav.${item.i18nKey}`) : item.label}
-                </Link>
-              ))}
+            <nav className="hidden md:flex items-center gap-6 lg:gap-8 md:ml-0">
+              {navItems.map((item) => {
+                const isActive = getCategoryIdFromHref(item.href) === activeCategoryId;
+                return (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className={`text-sm transition-colors duration-200 ${
+                      isActive
+                        ? 'text-primary font-medium'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    {item.i18nKey ? t(`nav.${item.i18nKey}`) : item.label}
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* Right Actions */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 shrink-0">
               <Button
                 variant="ghost"
                 size="icon"
                 className="hidden sm:flex"
                 onClick={() => navigate('/store')}
-                aria-label="Search"
+                aria-label={t('common.search')}
               >
                 <Search className="w-5 h-5" />
               </Button>
@@ -68,7 +78,7 @@ export function Navigation() {
                 size="icon"
                 className="relative"
                 onClick={() => navigate('/cart')}
-                aria-label="Cart"
+                aria-label={t('common.cart')}
               >
                 <ShoppingCart className="w-5 h-5" />
                 <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center">
@@ -120,7 +130,7 @@ export function Navigation() {
               <nav className="flex flex-col gap-4">
                 {navItems.map((item, index) => (
                   <motion.div
-                    key={item.label}
+                    key={item.href}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
@@ -129,7 +139,7 @@ export function Navigation() {
                 <Link
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block"
+                  className={`block ${getCategoryIdFromHref(item.href) === activeCategoryId ? 'text-primary font-medium' : ''}`}
                 >
                   {item.i18nKey ? t(`nav.${item.i18nKey}`) : item.label}
                 </Link>

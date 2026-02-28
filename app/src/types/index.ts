@@ -46,6 +46,8 @@ export interface CategoryGroup {
   id: string;
   title: string;
   subtitle: string;
+  /** i18n key for nav/hero (e.g. aiTools, streaming) */
+  labelKey?: string;
   /** Representative image for this category */
   image: string;
   categories: Category[];

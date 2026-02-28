@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Shield, Zap, Clock, BadgeCheck } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { navItems } from '@/lib/data';
+import { getActiveCategoryIdFromPath, getCategoryIdFromHref } from '@/lib/nav-utils';
 
 const trustItemKeys = ['securePayments', 'instantDelivery', 'support24', 'moneyBack'] as const;
 const trustIcons = [Shield, Zap, Clock, BadgeCheck];
@@ -31,8 +33,20 @@ const itemVariants = {
   },
 };
 
+/** Top-level category links only (exclude Deals); labels match navbar */
+const heroCategoryLinks = navItems.filter((item) => item.href.startsWith('/store/group/'));
+
 export function Hero() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
+  const activeCategoryId = getActiveCategoryIdFromPath(pathname);
+  const primaryCategory =
+    heroCategoryLinks.find((item) => getCategoryIdFromHref(item.href) === activeCategoryId) ??
+    heroCategoryLinks[0];
+  const primaryCategoryName = primaryCategory?.i18nKey
+    ? t(`nav.${primaryCategory.i18nKey}`)
+    : primaryCategory?.label ?? '';
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-18">
       {/* Background */}
@@ -111,26 +125,53 @@ export function Hero() {
             {t('hero.subheadline')}
           </motion.p>
 
-          {/* CTAs */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-12">
+          {/* Primary CTA: Explore {Current Category}; Secondary: Browse Deals */}
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-3 sm:gap-4 mb-6">
             <Button
               asChild
               size="lg"
-              className="bg-gradient-primary hover:opacity-90 text-white border-0 text-base px-8 py-6 transition-all duration-300 hover:scale-105 hover:shadow-glow"
+              className="bg-gradient-primary hover:opacity-90 text-white border-0 text-base px-6 py-5 sm:px-8 sm:py-6 transition-all duration-300 hover:scale-105 hover:shadow-glow"
             >
-              <Link to="/store/group/ai-digital-tools" className="inline-flex items-center">
-                {t('hero.ctaPrimary')}
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <Link to={primaryCategory?.href ?? '/store'} className="inline-flex items-center">
+                {t('hero.ctaExploreCategory', { category: primaryCategoryName })}
+                <ArrowRight className="w-5 h-5 ml-2 shrink-0" />
               </Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-border hover:bg-surface-2 text-base px-8 py-6 transition-all duration-300"
+              className="border-border hover:bg-surface-2 text-base px-6 py-5 sm:px-8 sm:py-6 transition-all duration-300"
             >
-              <Link to="/store/group/streaming-entertainment">{t('hero.ctaSecondary')}</Link>
+              <Link to="/store">{t('hero.ctaBrowseDeals')}</Link>
             </Button>
+          </motion.div>
+
+          {/* Category chips: all 5 categories, active highlight matches nav */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap gap-2 sm:gap-3 mb-12"
+          >
+            {heroCategoryLinks.map((item) => {
+              const isActive = getCategoryIdFromHref(item.href) === activeCategoryId;
+              return (
+                <Button
+                  key={item.href}
+                  asChild
+                  size="sm"
+                  variant={isActive ? 'default' : 'outline'}
+                  className={
+                    isActive
+                      ? 'bg-primary/90 hover:bg-primary text-primary-foreground border-0'
+                      : 'border-border hover:bg-surface-2'
+                  }
+                >
+                  <Link to={item.href}>
+                    {item.i18nKey ? t(`nav.${item.i18nKey}`) : item.label}
+                  </Link>
+                </Button>
+              );
+            })}
           </motion.div>
 
           {/* Trust Bar */}

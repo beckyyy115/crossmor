@@ -1,7 +1,10 @@
 {
   "nav": {
-    "aiTools": "AI 工具 VIP",
-    "streaming": "流媒体与礼品卡",
+    "aiTools": "AI 与数字工具",
+    "streaming": "流媒体与娱乐",
+    "giftCards": "礼品卡与钱包",
+    "software": "软件与 SaaS",
+    "regional": "区域服务",
     "deals": "优惠"
   },
   "common": {
@@ -58,7 +61,19 @@
     "headlineAfter": "便捷",
     "subheadline": "CrossMor 是您的 Merchant of Record，提供 AI 订阅与数字商品。我们负责支付、税务与合规，您只需享受即时发货。",
     "ctaPrimary": "查看 AI 工具",
-    "ctaSecondary": "流媒体与礼品卡"
+    "ctaSecondary": "流媒体与礼品卡",
+    "ctaExploreCategory": "探索 {{category}}",
+    "ctaBrowseDeals": "浏览优惠"
+  },
+  "categories": {
+    "browseByCategory": "按分类浏览",
+    "exploreRange": "探索我们丰富的数字商品",
+    "viewAll": "查看全部",
+    "subtitle_ai_digital_tools": "高端 AI 订阅与 API 额度",
+    "subtitle_streaming_entertainment": "视频与音乐订阅",
+    "subtitle_gift_cards_wallet": "数字礼品卡与预付",
+    "subtitle_software_saas": "效率与创意软件",
+    "subtitle_regional_services": "本地 OTT、流媒体券与钱包"
   },
   "footer": {
     "aiSubscriptions": "AI 订阅",

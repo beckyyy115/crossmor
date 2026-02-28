@@ -1,5 +1,12 @@
 {
-  "nav": { "aiTools": "AI Tools VIP", "streaming": "สตรีมมิ่งและบัตร", "deals": "ดีล" },
+  "nav": {
+    "aiTools": "AI และเครื่องมือดิจิทัล",
+    "streaming": "สตรีมมิ่งและความบันเทิง",
+    "giftCards": "บัตรของขวัญและกระเป๋าเงิน",
+    "software": "ซอฟต์แวร์และ SaaS",
+    "regional": "บริการระดับภูมิภาค",
+    "deals": "ดีล"
+  },
   "common": {
     "contact": "ติดต่อ",
     "signUp": "สมัคร",
@@ -13,14 +20,28 @@
     "subtotal": "ยอดย่อย",
     "total": "รวม",
     "trackOrder": "ติดตามคำสั่งซื้อ",
-    "orderId": "เลขที่คำสั่งซื้อ"
+    "orderId": "เลขที่คำสั่งซื้อ",
+    "trustedBadge": "ได้รับความไว้วางใจจากผู้ใช้ 2 ล้านคนทั่วโลก"
   },
   "hero": {
     "headline": "ดิจิทัลโกลบอล ",
     "highlight": "ชำระเงินท้องถิ่น",
     "headlineAfter": "",
+    "subheadline": "CrossMor เป็น Merchant of Record สำหรับการสมัครสมาชิก AI และสินค้าดิจิทัล เราจัดการการชำระเงิน ภาษี และการปฏิบัติตาม — คุณได้รับของทันที",
     "ctaPrimary": "ดู AI Tools",
-    "ctaSecondary": "สตรีมมิ่งและบัตร"
+    "ctaSecondary": "สตรีมมิ่งและบัตร",
+    "ctaExploreCategory": "สำรวจ {{category}}",
+    "ctaBrowseDeals": "ดูดีล"
+  },
+  "categories": {
+    "browseByCategory": "เลือกตามหมวดหมู่",
+    "exploreRange": "สำรวจสินค้าดิจิทัลของเรา",
+    "viewAll": "ดูทั้งหมด",
+    "subtitle_ai_digital_tools": "การสมัครสมาชิก AI และเครดิต API",
+    "subtitle_streaming_entertainment": "การสมัครสตรีมมิ่งวิดีโอและเพลง",
+    "subtitle_gift_cards_wallet": "บัตรของขวัญดิจิทัลและเติมเงินล่วงหน้า",
+    "subtitle_software_saas": "ซอฟต์แวร์สำหรับงานและครีเอทีฟ",
+    "subtitle_regional_services": "OTT ท้องถิ่น บัตรสตรีมมิ่ง และกระเป๋าเงิน"
   },
   "footer": {}
 }

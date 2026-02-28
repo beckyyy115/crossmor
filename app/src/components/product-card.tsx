@@ -4,6 +4,7 @@ import { Star, Zap, ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { ProductImage } from '@/components/product-image';
 import type { Product } from '@/types';
 import { useCart } from '@/state/cart';
 import { useCurrency } from '@/hooks/use-currency';
@@ -40,14 +41,14 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         </Badge>
       )}
 
-      {/* Image */}
-      <div className="relative aspect-[4/3] overflow-hidden bg-surface-2 z-10">
-        <img
-          src={product.image}
+      {/* Logo: from product.image; fallback if missing or load fails */}
+      <div className="relative aspect-[4/3] overflow-hidden bg-surface-2 z-10 flex items-center justify-center p-6">
+        <ProductImage
+          image={product.image}
           alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface-1/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface-1/80 to-transparent pointer-events-none" />
       </div>
 
       {/* Content */}

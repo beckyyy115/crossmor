@@ -1,7 +1,10 @@
 {
   "nav": {
-    "aiTools": "AI टूल्स VIP",
-    "streaming": "स्ट्रीमिंग और कार्ड",
+    "aiTools": "AI और डिजिटल टूल्स",
+    "streaming": "स्ट्रीमिंग और मनोरंजन",
+    "giftCards": "गिफ्ट कार्ड और वॉलेट",
+    "software": "सॉफ्टवेयर और SaaS",
+    "regional": "क्षेत्रीय सेवाएं",
     "deals": "डील्स"
   },
   "common": {
@@ -58,7 +61,19 @@
     "headlineAfter": "",
     "subheadline": "CrossMor आपका Merchant of Record है। हम पेमेंट, टैक्स और कॉम्प्लायंस संभालते हैं — आप तुरंत डिलीवरी पाएं।",
     "ctaPrimary": "AI टूल्स देखें",
-    "ctaSecondary": "स्ट्रीमिंग और कार्ड"
+    "ctaSecondary": "स्ट्रीमिंग और कार्ड",
+    "ctaExploreCategory": "{{category}} एक्सप्लोर करें",
+    "ctaBrowseDeals": "डील्स देखें"
+  },
+  "categories": {
+    "browseByCategory": "श्रेणी के अनुसार ब्राउज़ करें",
+    "exploreRange": "डिजिटल गुड्स की हमारी विस्तृत रेंज देखें",
+    "viewAll": "सभी देखें",
+    "subtitle_ai_digital_tools": "प्रीमियम AI सब्सक्रिप्शन और API क्रेडिट",
+    "subtitle_streaming_entertainment": "वीडियो और म्यूज़िक सब्सक्रिप्शन",
+    "subtitle_gift_cards_wallet": "डिजिटल गिफ्ट कार्ड और प्रीपेड",
+    "subtitle_software_saas": "प्रोडक्टिविटी और क्रिएटिव सॉफ्टवेयर",
+    "subtitle_regional_services": "लोकल OTT, स्ट्रीमिंग वाउचर और वॉलेट"
   },
   "footer": {
     "aiSubscriptions": "AI सब्सक्रिप्शन",

@@ -2,6 +2,9 @@
   "nav": {
     "aiTools": "AI Tools VIP",
     "streaming": "Streaming e Cartões",
+    "giftCards": "Cartões e Carteira",
+    "software": "Software e SaaS",
+    "regional": "Serviços Regionais",
     "deals": "Ofertas"
   },
   "common": {
@@ -58,7 +61,19 @@
     "headlineAfter": "",
     "subheadline": "A CrossMor é sua Merchant of Record para assinaturas de IA e bens digitais. Cuidamos de pagamentos, impostos e conformidade — você recebe na hora.",
     "ctaPrimary": "Ver AI Tools",
-    "ctaSecondary": "Streaming e Cartões"
+    "ctaSecondary": "Streaming e Cartões",
+    "ctaExploreCategory": "Explorar {{category}}",
+    "ctaBrowseDeals": "Ver Ofertas"
+  },
+  "categories": {
+    "browseByCategory": "Navegar por categoria",
+    "exploreRange": "Explore nossa variedade de bens digitais",
+    "viewAll": "Ver tudo",
+    "subtitle_ai_digital_tools": "Assinaturas de IA e créditos API",
+    "subtitle_streaming_entertainment": "Streaming de vídeo e música",
+    "subtitle_gift_cards_wallet": "Cartões presente e pré-pagos",
+    "subtitle_software_saas": "Software de produtividade e criativo",
+    "subtitle_regional_services": "OTT local, vouchers e carteiras"
   },
   "footer": {
     "aiSubscriptions": "Assinaturas AI",

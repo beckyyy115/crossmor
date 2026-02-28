@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Separator } from '@/components/ui/separator';
 import { useCart } from '@/state/cart';
 import { useCurrency } from '@/hooks/use-currency';
+import { ProductImage } from '@/components/product-image';
 import { allProducts, getProductById } from '@/lib/store';
 
 export function ItemDetail() {
@@ -69,8 +70,12 @@ export function ItemDetail() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Image */}
           <div className="bg-surface-1 border border-border rounded-2xl overflow-hidden">
-            <div className="aspect-[4/3] bg-surface-2">
-              <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+            <div className="aspect-[4/3] bg-surface-2 flex items-center justify-center p-8">
+              <ProductImage
+                image={product.image}
+                alt={product.name}
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="p-5">
               <div className="flex flex-wrap gap-2">

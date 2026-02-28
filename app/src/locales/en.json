@@ -10,6 +10,7 @@
   "common": {
     "contact": "Contact",
     "signUp": "Sign up",
+    "signIn": "Sign in",
     "search": "Search",
     "cart": "Cart",
     "back": "Back",
@@ -62,7 +63,19 @@
     "headlineAfter": " Convenience",
     "subheadline": "CrossMor is your Merchant of Record for seamless AI subscriptions and digital goods. We handle payments, taxes, and compliance — you enjoy instant delivery.",
     "ctaPrimary": "View AI Tools",
-    "ctaSecondary": "Streaming & Cards"
+    "ctaSecondary": "Streaming & Cards",
+    "ctaExploreCategory": "Explore {{category}}",
+    "ctaBrowseDeals": "Browse Deals"
+  },
+  "categories": {
+    "browseByCategory": "Browse by Category",
+    "exploreRange": "Explore our wide range of digital goods across AI tools and entertainment",
+    "viewAll": "View All",
+    "subtitle_ai_digital_tools": "Premium AI subscriptions and API credits",
+    "subtitle_streaming_entertainment": "Video and music subscriptions",
+    "subtitle_gift_cards_wallet": "Digital gift cards and prepaid options",
+    "subtitle_software_saas": "Productivity and creative software",
+    "subtitle_regional_services": "Local OTT, streaming vouchers, and wallet top-ups"
   },
   "footer": {
     "aiSubscriptions": "AI Subscriptions",

@@ -10,6 +10,7 @@ import { Separator } from '@/components/ui/separator';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
 import { useCart } from '@/state/cart';
 import { useCurrency } from '@/hooks/use-currency';
+import { ProductImage } from '@/components/product-image';
 import { createDemoOrder } from '@/lib/orders';
 
 export function CartPage() {
@@ -52,8 +53,12 @@ export function CartPage() {
               <div className="bg-surface-1 border border-border rounded-2xl divide-y divide-border">
                 {items.map((item) => (
                   <div key={item.product.id} className="p-5 flex gap-4">
-                    <div className="w-24 h-18 rounded-lg overflow-hidden bg-surface-2 shrink-0">
-                      <img src={item.product.image} alt={item.product.name} className="w-full h-full object-cover" />
+                    <div className="w-24 h-18 rounded-lg overflow-hidden bg-surface-2 shrink-0 flex items-center justify-center">
+                      <ProductImage
+                        image={item.product.image}
+                        alt={item.product.name}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-start justify-between gap-4">
