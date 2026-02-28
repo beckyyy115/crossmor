@@ -1,10 +1,10 @@
 {
   "nav": {
-    "aiTools": "AI 与数字工具",
+    "ai_tools": "AI 与数字工具",
     "streaming": "流媒体与娱乐",
-    "giftCards": "礼品卡与钱包",
-    "software": "软件与 SaaS",
-    "regional": "区域服务",
+    "gift_cards_wallet": "礼品卡与钱包",
+    "software_saas": "软件与 SaaS",
+    "regional_services": "区域服务",
     "deals": "优惠"
   },
   "common": {

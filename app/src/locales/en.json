@@ -1,10 +1,10 @@
 {
   "nav": {
-    "aiTools": "AI & Digital Tools",
+    "ai_tools": "AI & Digital Tools",
     "streaming": "Streaming & Entertainment",
-    "giftCards": "Gift Cards & Wallet",
-    "software": "Software & SaaS",
-    "regional": "Regional Services",
+    "gift_cards_wallet": "Gift Cards & Wallet",
+    "software_saas": "Software & SaaS",
+    "regional_services": "Regional Services",
     "deals": "Deals"
   },
   "common": {

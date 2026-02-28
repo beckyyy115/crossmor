@@ -2,12 +2,12 @@ import type { Product, CategoryGroup, Testimonial, PaymentMethod, NavItem } from
 
 // ─── Navigation ─────────────────────────────────────────────────────────────
 export const navItems: NavItem[] = [
-  { label: 'AI & Digital Tools', href: '/store/group/ai-digital-tools', i18nKey: 'aiTools' },
-  { label: 'Streaming & Entertainment', href: '/store/group/streaming-entertainment', i18nKey: 'streaming' },
-  { label: 'Gift Cards & Wallet', href: '/store/group/gift-cards-wallet', i18nKey: 'giftCards' },
-  { label: 'Software & SaaS', href: '/store/group/software-saas', i18nKey: 'software' },
-  { label: 'Regional Services', href: '/store/group/regional-services', i18nKey: 'regional' },
-  { label: 'Deals', href: '/store', i18nKey: 'deals' },
+  { id: 'ai-digital-tools', labelKey: 'ai_tools', href: '/store/group/ai-digital-tools' },
+  { id: 'streaming-entertainment', labelKey: 'streaming', href: '/store/group/streaming-entertainment' },
+  { id: 'gift-cards-wallet', labelKey: 'gift_cards_wallet', href: '/store/group/gift-cards-wallet' },
+  { id: 'software-saas', labelKey: 'software_saas', href: '/store/group/software-saas' },
+  { id: 'regional-services', labelKey: 'regional_services', href: '/store/group/regional-services' },
+  { id: 'deals', labelKey: 'deals', href: '/store' },
 ];
 
 // ─── Category groups (top-level) + subcategories ─────────────────────────────
@@ -16,7 +16,7 @@ export const categoryGroups: CategoryGroup[] = [
     id: 'ai-digital-tools',
     title: 'AI & Digital Tools',
     subtitle: 'Premium AI subscriptions and API credits',
-    labelKey: 'aiTools',
+    labelKey: 'ai_tools',
     image: '/images/categories/ai-digital-tools.jpg',
     categories: [
       {
@@ -50,7 +50,7 @@ export const categoryGroups: CategoryGroup[] = [
     id: 'gift-cards-wallet',
     title: 'Gift Cards & Wallet Top-Up',
     subtitle: 'Digital gift cards and prepaid options',
-    labelKey: 'giftCards',
+    labelKey: 'gift_cards_wallet',
     image: '/images/categories/gift-cards-wallet.jpg',
     categories: [
       {
@@ -67,7 +67,7 @@ export const categoryGroups: CategoryGroup[] = [
     id: 'software-saas',
     title: 'Software & SaaS Subscriptions',
     subtitle: 'Productivity and creative software',
-    labelKey: 'software',
+    labelKey: 'software_saas',
     image: '/images/categories/software-saas.jpg',
     categories: [
       {
@@ -84,7 +84,7 @@ export const categoryGroups: CategoryGroup[] = [
     id: 'regional-services',
     title: 'Regional Digital Services',
     subtitle: 'Local OTT, streaming vouchers, and wallet top-ups',
-    labelKey: 'regional',
+    labelKey: 'regional_services',
     image: '/images/categories/regional-services.jpg',
     categories: [
       {

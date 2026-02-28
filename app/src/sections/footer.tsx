@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Twitter, MessageCircle, Instagram, Linkedin } from 'lucide-react';
+import { useActiveCategory } from '@/contexts/active-category';
 
 const footerLinkKeys = {
   products: ['aiSubscriptions', 'giftCards', 'softwareLicenses'] as const,
@@ -30,7 +31,8 @@ const socialLinks = [
 ];
 
 export function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const { activeCategory } = useActiveCategory();
   return (
     <footer className="bg-surface-1 border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -128,6 +130,11 @@ export function Footer() {
             CrossMor is a registered Merchant of Record.
           </p>
         </div>
+        {import.meta.env.DEV && (
+          <p className="mt-2 text-xs text-muted-foreground/70" data-dev-debug>
+            [DEV] lang={i18n.language} • activeCategory={activeCategory}
+          </p>
+        )}
       </div>
     </footer>
   );

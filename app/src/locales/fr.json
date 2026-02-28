@@ -1,5 +1,12 @@
 {
-  "nav": { "aiTools": "AI Tools VIP", "streaming": "Streaming et cartes", "deals": "Offres" },
+  "nav": {
+    "ai_tools": "IA et Outils Numériques",
+    "streaming": "Streaming et Divertissement",
+    "gift_cards_wallet": "Cartes cadeaux et Portefeuille",
+    "software_saas": "Logiciel et SaaS",
+    "regional_services": "Services Régionaux",
+    "deals": "Offres"
+  },
   "common": {
     "contact": "Contact",
     "signUp": "S'inscrire",

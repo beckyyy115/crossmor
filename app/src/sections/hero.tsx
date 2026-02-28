@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Shield, Zap, Clock, BadgeCheck } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { navItems } from '@/lib/data';
-import { getActiveCategoryIdFromPath, getCategoryIdFromHref } from '@/lib/nav-utils';
+import { useActiveCategory } from '@/contexts/active-category';
 
 const trustItemKeys = ['securePayments', 'instantDelivery', 'support24', 'moneyBack'] as const;
 const trustIcons = [Shield, Zap, Clock, BadgeCheck];
@@ -38,14 +38,10 @@ const heroCategoryLinks = navItems.filter((item) => item.href.startsWith('/store
 
 export function Hero() {
   const { t } = useTranslation();
-  const { pathname } = useLocation();
-  const activeCategoryId = getActiveCategoryIdFromPath(pathname);
+  const { activeCategory } = useActiveCategory();
   const primaryCategory =
-    heroCategoryLinks.find((item) => getCategoryIdFromHref(item.href) === activeCategoryId) ??
-    heroCategoryLinks[0];
-  const primaryCategoryName = primaryCategory?.i18nKey
-    ? t(`nav.${primaryCategory.i18nKey}`)
-    : primaryCategory?.label ?? '';
+    heroCategoryLinks.find((item) => item.id === activeCategory) ?? heroCategoryLinks[0];
+  const primaryCategoryName = primaryCategory ? t(`nav.${primaryCategory.labelKey}`) : '';
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-18">
@@ -153,7 +149,7 @@ export function Hero() {
             className="flex flex-wrap gap-2 sm:gap-3 mb-12"
           >
             {heroCategoryLinks.map((item) => {
-              const isActive = getCategoryIdFromHref(item.href) === activeCategoryId;
+              const isActive = item.id === activeCategory;
               return (
                 <Button
                   key={item.href}
@@ -166,9 +162,7 @@ export function Hero() {
                       : 'border-border hover:bg-surface-2'
                   }
                 >
-                  <Link to={item.href}>
-                    {item.i18nKey ? t(`nav.${item.i18nKey}`) : item.label}
-                  </Link>
+                  <Link to={item.href}>{t(`nav.${item.labelKey}`)}</Link>
                 </Button>
               );
             })}

@@ -1,10 +1,10 @@
 {
   "nav": {
-    "aiTools": "AI & Công cụ số",
+    "ai_tools": "AI & Công cụ số",
     "streaming": "Streaming & Giải trí",
-    "giftCards": "Thẻ quà & Ví",
-    "software": "Phần mềm & SaaS",
-    "regional": "Dịch vụ khu vực",
+    "gift_cards_wallet": "Thẻ quà & Ví",
+    "software_saas": "Phần mềm & SaaS",
+    "regional_services": "Dịch vụ khu vực",
     "deals": "Ưu đãi"
   },
   "common": {

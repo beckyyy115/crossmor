@@ -1,14 +1,29 @@
 {
-  "nav": { "aiTools": "AIツール VIP", "streaming": "ストリーミング＆ギフトカード", "deals": "お得" },
+  "nav": {
+    "ai_tools": "AI・デジタルツール",
+    "streaming": "ストリーミング＆エンターテインメント",
+    "gift_cards_wallet": "ギフトカード＆ウォレット",
+    "software_saas": "ソフトウェア＆SaaS",
+    "regional_services": "地域サービス",
+    "deals": "お得情報"
+  },
   "common": {
     "contact": "お問い合わせ",
     "signUp": "登録",
+    "signIn": "ログイン",
+    "search": "検索",
     "cart": "カート",
     "back": "戻る",
     "add": "追加",
+    "addToCart": "カートに追加",
     "viewCart": "カートを見る",
     "continueShopping": "買い物を続ける",
     "browseStore": "ストアを見る",
+    "trustedBadge": "全世界200万ユーザーに信頼",
+    "securePayments": "安全な支払い",
+    "instantDelivery": "即時配送",
+    "support24": "24時間サポート",
+    "moneyBack": "返金保証",
     "orderSummary": "注文概要",
     "subtotal": "小計",
     "total": "合計",
@@ -17,10 +32,36 @@
   },
   "hero": {
     "headline": "グローバルなデジタル商品、",
-    "highlight": "現地通貨でお支払い",
-    "headlineAfter": "",
-    "ctaPrimary": "AIツールを見る",
-    "ctaSecondary": "ストリーミング＆カード"
+    "highlight": "現地決済",
+    "headlineAfter": " で便利に",
+    "subheadline": "CrossMorはAIサブスクやデジタル商品のMerchant of Recordです。決済・税・コンプライアンスを代行し、即時配送をお届けします。",
+    "ctaExploreCategory": "{{category}}を見る",
+    "ctaBrowseDeals": "お得情報を見る"
   },
-  "footer": {}
+  "categories": {
+    "browseByCategory": "カテゴリで探す",
+    "exploreRange": "AIツールからエンタメまで、幅広いデジタル商品をご用意しています",
+    "viewAll": "すべて見る",
+    "subtitle_ai_digital_tools": "プレミアムAIサブスクとAPIクレジット",
+    "subtitle_streaming_entertainment": "動画・音楽サブスク",
+    "subtitle_gift_cards_wallet": "デジタルギフトカード・プリペイド",
+    "subtitle_software_saas": "仕事・クリエイティブ向けソフト",
+    "subtitle_regional_services": "地域OTT・ストリーミング券・ウォレット"
+  },
+  "footer": {
+    "aiSubscriptions": "AIサブスク",
+    "giftCards": "ギフトカード",
+    "softwareLicenses": "ソフトウェア",
+    "helpCenter": "ヘルプ",
+    "contactUs": "お問い合わせ",
+    "trackOrder": "注文追跡",
+    "refundPolicy": "返金ポリシー",
+    "termsOfService": "利用規約",
+    "privacyPolicy": "プライバシー",
+    "cookiePolicy": "Cookie",
+    "compliance": "コンプライアンス",
+    "products": "商品",
+    "support": "サポート",
+    "legal": "法的情報"
+  }
 }

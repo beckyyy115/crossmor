@@ -1,10 +1,10 @@
 {
   "nav": {
-    "aiTools": "AI Tools VIP",
-    "streaming": "Streaming e Cartões",
-    "giftCards": "Cartões e Carteira",
-    "software": "Software e SaaS",
-    "regional": "Serviços Regionais",
+    "ai_tools": "AI e Ferramentas Digitais",
+    "streaming": "Streaming e Entretenimento",
+    "gift_cards_wallet": "Cartões e Carteira",
+    "software_saas": "Software e SaaS",
+    "regional_services": "Serviços Regionais",
     "deals": "Ofertas"
   },
   "common": {

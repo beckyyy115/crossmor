@@ -2,18 +2,17 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ShoppingCart, Search } from 'lucide-react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useScrollPosition } from '@/hooks/use-scroll-position';
 import { navItems } from '@/lib/data';
-import { getActiveCategoryIdFromPath, getCategoryIdFromHref } from '@/lib/nav-utils';
+import { useActiveCategory } from '@/contexts/active-category';
 import { useCart } from '@/state/cart';
 import { LanguageSwitcher } from '@/components/language-switcher';
 
 export function Navigation() {
   const { t } = useTranslation();
-  const { pathname } = useLocation();
-  const activeCategoryId = getActiveCategoryIdFromPath(pathname);
+  const { activeCategory, setActiveCategory } = useActiveCategory();
   const { isScrolled } = useScrollPosition();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -44,18 +43,19 @@ export function Navigation() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6 lg:gap-8 md:ml-0">
               {navItems.map((item) => {
-                const isActive = getCategoryIdFromHref(item.href) === activeCategoryId;
+                const isActive = item.id === activeCategory;
                 return (
                   <Link
                     key={item.href}
                     to={item.href}
+                    onClick={() => setActiveCategory(item.id)}
                     className={`text-sm transition-colors duration-200 ${
                       isActive
                         ? 'text-primary font-medium'
                         : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
-                    {item.i18nKey ? t(`nav.${item.i18nKey}`) : item.label}
+                    {t(`nav.${item.labelKey}`)}
                   </Link>
                 );
               })}
@@ -138,10 +138,13 @@ export function Navigation() {
                   >
                 <Link
                   to={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block ${getCategoryIdFromHref(item.href) === activeCategoryId ? 'text-primary font-medium' : ''}`}
+                  onClick={() => {
+                    setActiveCategory(item.id);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`block ${item.id === activeCategory ? 'text-primary font-medium' : ''}`}
                 >
-                  {item.i18nKey ? t(`nav.${item.i18nKey}`) : item.label}
+                  {t(`nav.${item.labelKey}`)}
                 </Link>
                   </motion.div>
                 ))}

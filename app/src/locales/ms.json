@@ -1,5 +1,12 @@
 {
-  "nav": { "aiTools": "AI Tools VIP", "streaming": "Streaming & Kad hadiah", "deals": "Tawaran" },
+  "nav": {
+    "ai_tools": "AI & Alat Digital",
+    "streaming": "Streaming & Hiburan",
+    "gift_cards_wallet": "Kad hadiah & Dompet",
+    "software_saas": "Perisian & SaaS",
+    "regional_services": "Perkhidmatan Serantau",
+    "deals": "Tawaran"
+  },
   "common": {
     "contact": "Hubungi",
     "signUp": "Daftar",

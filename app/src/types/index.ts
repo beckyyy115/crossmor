@@ -74,9 +74,10 @@ export interface CartItem {
 }
 
 export interface NavItem {
-  label: string;
+  /** Stable id for active state and hash (e.g. ai-digital-tools, deals) */
+  id: string;
+  /** i18n key only, e.g. nav.ai_tools → store labelKey: 'nav.ai_tools' or 'ai_tools' for t('nav.'+x) */
+  labelKey: string;
   href: string;
-  /** 用于 i18n 的 key，如 nav.aiTools */
-  i18nKey?: string;
   children?: NavItem[];
 }

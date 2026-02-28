@@ -41,7 +41,11 @@ i18n.use(initReactI18next).init({
   resources,
   lng: initialLang,
   fallbackLng: 'en',
+  defaultNS: 'translation',
   interpolation: { escapeValue: false },
+  react: { useSuspense: true },
+  // Missing keys in current language fall back to English
+  saveMissing: false,
 });
 
 i18n.on('languageChanged', (lng) => {

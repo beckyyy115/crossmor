@@ -1,10 +1,10 @@
 {
   "nav": {
-    "aiTools": "AI & Alat Digital",
+    "ai_tools": "AI & Alat Digital",
     "streaming": "Streaming & Hiburan",
-    "giftCards": "Gift Card & Dompet",
-    "software": "Perangkat Lunak & SaaS",
-    "regional": "Layanan Regional",
+    "gift_cards_wallet": "Gift Card & Dompet",
+    "software_saas": "Perangkat Lunak & SaaS",
+    "regional_services": "Layanan Regional",
     "deals": "Penawaran"
   },
   "common": {

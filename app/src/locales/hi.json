@@ -1,10 +1,10 @@
 {
   "nav": {
-    "aiTools": "AI और डिजिटल टूल्स",
+    "ai_tools": "AI और डिजिटल टूल्स",
     "streaming": "स्ट्रीमिंग और मनोरंजन",
-    "giftCards": "गिफ्ट कार्ड और वॉलेट",
-    "software": "सॉफ्टवेयर और SaaS",
-    "regional": "क्षेत्रीय सेवाएं",
+    "gift_cards_wallet": "गिफ्ट कार्ड और वॉलेट",
+    "software_saas": "सॉफ्टवेयर और SaaS",
+    "regional_services": "क्षेत्रीय सेवाएं",
     "deals": "डील्स"
   },
   "common": {

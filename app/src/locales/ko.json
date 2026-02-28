@@ -1,5 +1,12 @@
 {
-  "nav": { "aiTools": "AI 도구 VIP", "streaming": "스트리밍 및 기프트카드", "deals": "딜" },
+  "nav": {
+    "ai_tools": "AI 및 디지털 도구",
+    "streaming": "스트리밍 및 엔터테인먼트",
+    "gift_cards_wallet": "기프트 카드 및 지갑",
+    "software_saas": "소프트웨어 및 SaaS",
+    "regional_services": "지역 서비스",
+    "deals": "딜"
+  },
   "common": {
     "contact": "문의",
     "signUp": "가입",
