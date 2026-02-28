@@ -1,7 +1,10 @@
 {
   "nav": {
-    "aiTools": "AI Tools VIP",
-    "streaming": "Streaming & Cards",
+    "aiTools": "AI & Digital Tools",
+    "streaming": "Streaming & Entertainment",
+    "giftCards": "Gift Cards & Wallet",
+    "software": "Software & SaaS",
+    "regional": "Regional Services",
     "deals": "Deals"
   },
   "common": {

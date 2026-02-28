@@ -44,7 +44,7 @@ export function StoreHome() {
               <Input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                placeholder="Search products (Steam, Xbox, ChatGPT, region…)"
+                placeholder="Search products (ChatGPT, Netflix, region…)"
                 className="pl-9 bg-surface-1 border-border"
               />
             </div>

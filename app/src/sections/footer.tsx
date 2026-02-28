@@ -9,9 +9,9 @@ const footerLinkKeys = {
 };
 
 const footerHrefs: Record<string, string> = {
-  aiSubscriptions: '/store/group/ai-tools',
-  giftCards: '/store/group/streaming',
-  softwareLicenses: '/store/c/software',
+  aiSubscriptions: '/store/group/ai-digital-tools',
+  giftCards: '/store/group/gift-cards-wallet',
+  softwareLicenses: '/store/group/software-saas',
   helpCenter: '/help',
   contactUs: '/contact',
   trackOrder: '/track-order',

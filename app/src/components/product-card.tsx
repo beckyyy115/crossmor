@@ -17,7 +17,7 @@ interface ProductCardProps {
 export function ProductCard({ product, index = 0 }: ProductCardProps) {
   const { t } = useTranslation();
   const { addItem } = useCart();
-  const { formatPrice } = useCurrency();
+  const { formatProductPrice, formatPrice } = useCurrency();
 
   return (
     <motion.div
@@ -86,9 +86,9 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
           <div>
             <div className="flex items-center gap-2">
               <span className="text-xl font-bold text-foreground font-mono">
-                {formatPrice(product.price)}
+                {formatProductPrice(product)}
               </span>
-              {product.originalPrice && (
+              {product.originalPrice != null && (
                 <span className="text-sm text-muted-foreground line-through">
                   {formatPrice(product.originalPrice)}
                 </span>

@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { formatPrice as formatPriceUtil, formatAmount, convertUsdToLocal } from '@/lib/currency';
 import { getCurrencyByLocale } from '@/lib/locales';
+import type { Product } from '@/types';
 
 /**
  * 当前语言对应的货币与价格格式化
@@ -23,6 +24,12 @@ export function useCurrency() {
       formatAmount: (amount: number, curr?: string) => formatAmount(amount, curr ?? currency),
       /** USD 转当前货币数值（下单时用） */
       usdToLocal: (usdAmount: number) => convertUsdToLocal(usdAmount, currency),
+      /** 商品显示价：优先 priceByCurrency[currency]，否则按 USD 换算 */
+      formatProductPrice: (product: Product): string => {
+        const fixed = product.priceByCurrency?.[currency];
+        if (fixed != null) return formatAmount(fixed, currency);
+        return formatPriceUtil(product.price, currency);
+      },
     }),
     [currency]
   );

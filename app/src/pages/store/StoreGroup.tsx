@@ -26,6 +26,17 @@ export function StoreGroup() {
   return (
     <div className="pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Category hero image */}
+        {group.image && (
+          <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden mb-10 bg-surface-2">
+            <img
+              src={group.image}
+              alt=""
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-surface-1 via-transparent to-transparent" />
+          </div>
+        )}
         <div className="flex items-center justify-between gap-4 mb-10">
           <div>
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">{group.title}</h1>

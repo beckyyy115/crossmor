@@ -118,7 +118,7 @@ export function Hero() {
               size="lg"
               className="bg-gradient-primary hover:opacity-90 text-white border-0 text-base px-8 py-6 transition-all duration-300 hover:scale-105 hover:shadow-glow"
             >
-              <Link to="/store/group/ai-tools" className="inline-flex items-center">
+              <Link to="/store/group/ai-digital-tools" className="inline-flex items-center">
                 {t('hero.ctaPrimary')}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -129,7 +129,7 @@ export function Hero() {
               variant="outline"
               className="border-border hover:bg-surface-2 text-base px-8 py-6 transition-all duration-300"
             >
-              <Link to="/store/group/streaming">{t('hero.ctaSecondary')}</Link>
+              <Link to="/store/group/streaming-entertainment">{t('hero.ctaSecondary')}</Link>
             </Button>
           </motion.div>
 

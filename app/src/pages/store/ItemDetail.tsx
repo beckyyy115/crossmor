@@ -19,7 +19,7 @@ export function ItemDetail() {
   const navigate = useNavigate();
   const product = id ? getProductById(id) : undefined;
   const { addItem } = useCart();
-  const { formatPrice } = useCurrency();
+  const { formatProductPrice, formatPrice } = useCurrency();
 
   const related = useMemo(() => {
     if (!product) return [];
@@ -97,8 +97,8 @@ export function ItemDetail() {
             <div className="bg-surface-1 border border-border rounded-2xl p-6">
               <div className="flex items-baseline justify-between gap-4">
                 <div>
-                  <div className="text-3xl font-bold">{formatPrice(product.price)}</div>
-                  {product.originalPrice && (
+                  <div className="text-3xl font-bold">{formatProductPrice(product)}</div>
+                  {product.originalPrice != null && (
                     <div className="text-sm text-muted-foreground line-through">{formatPrice(product.originalPrice)}</div>
                   )}
                 </div>
