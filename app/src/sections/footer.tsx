@@ -3,7 +3,6 @@ import { Twitter, MessageCircle, Instagram, Linkedin } from 'lucide-react';
 
 const footerLinks = {
   products: [
-    { label: 'Game Top Ups', href: '/store/group/gaming' },
     { label: 'AI Subscriptions', href: '/store/group/ai-tools' },
     { label: 'Gift Cards', href: '/store/group/streaming' },
     { label: 'Software Licenses', href: '/store/c/software' },

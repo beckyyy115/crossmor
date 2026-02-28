@@ -1,4 +1,4 @@
-import { categoryGroups, gamingProducts, aiToolsProducts, streamingProducts } from '@/lib/data';
+import { categoryGroups, aiToolsProducts, streamingProducts } from '@/lib/data';
 import type { Category, CategoryGroup, Product } from '@/types';
 
 export const allGroups: CategoryGroup[] = categoryGroups;
@@ -6,7 +6,6 @@ export const allGroups: CategoryGroup[] = categoryGroups;
 export const allCategories: Category[] = categoryGroups.flatMap((g) => g.categories);
 
 export const allProducts: Product[] = [
-  ...gamingProducts,
   ...aiToolsProducts,
   ...streamingProducts,
 ];

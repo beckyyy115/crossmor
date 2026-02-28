@@ -15,7 +15,7 @@ export function CategoryGroups() {
             Browse by Category
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Explore our wide range of digital goods across gaming, AI tools, and entertainment
+            Explore our wide range of digital goods across AI tools and entertainment
           </p>
         </ScrollReveal>
 

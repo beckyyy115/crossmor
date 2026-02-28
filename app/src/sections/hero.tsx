@@ -110,7 +110,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
           >
-            CrossMor is your Merchant of Record for seamless game top-ups and AI subscriptions. 
+            CrossMor is your Merchant of Record for seamless AI subscriptions and digital goods. 
             We handle payments, taxes, and compliance — you enjoy instant delivery.
           </motion.p>
 
@@ -121,8 +121,8 @@ export function Hero() {
               size="lg"
               className="bg-gradient-primary hover:opacity-90 text-white border-0 text-base px-8 py-6 transition-all duration-300 hover:scale-105 hover:shadow-glow"
             >
-              <Link to="/store/group/gaming" className="inline-flex items-center">
-                Explore Gaming
+              <Link to="/store/group/ai-tools" className="inline-flex items-center">
+                View AI Tools
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
@@ -132,7 +132,7 @@ export function Hero() {
               variant="outline"
               className="border-border hover:bg-surface-2 text-base px-8 py-6 transition-all duration-300"
             >
-              <Link to="/store/group/ai-tools">View AI Tools</Link>
+              <Link to="/store/group/streaming">Streaming & Cards</Link>
             </Button>
           </motion.div>
 

@@ -1,62 +1,9 @@
 import type { Product, Category, Testimonial, PaymentMethod, NavItem, CategoryGroup } from '@/types';
 
 export const navItems: NavItem[] = [
-  { label: 'Gaming', href: '/store/group/gaming' },
   { label: 'AI Tools VIP', href: '/store/group/ai-tools' },
   { label: 'Streaming & Cards', href: '/store/group/streaming' },
   { label: 'Deals', href: '/store' },
-];
-
-// Gaming Categories
-export const gamingCategories: Category[] = [
-  {
-    id: 'steam',
-    name: 'Steam',
-    slug: 'steam',
-    image: '/images/categories/gaming.jpg',
-    icon: 'Gamepad2',
-    productCount: 156,
-  },
-  {
-    id: 'playstation',
-    name: 'PlayStation',
-    slug: 'playstation',
-    image: '/images/categories/gaming.jpg',
-    icon: 'Gamepad2',
-    productCount: 89,
-  },
-  {
-    id: 'xbox',
-    name: 'Xbox',
-    slug: 'xbox',
-    image: '/images/categories/gaming.jpg',
-    icon: 'Gamepad2',
-    productCount: 72,
-  },
-  {
-    id: 'mobile-games',
-    name: 'Mobile Games',
-    slug: 'mobile-games',
-    image: '/images/categories/mobile-games.jpg',
-    icon: 'Smartphone',
-    productCount: 234,
-  },
-  {
-    id: 'nintendo',
-    name: 'Nintendo',
-    slug: 'nintendo',
-    image: '/images/categories/gaming.jpg',
-    icon: 'Gamepad2',
-    productCount: 45,
-  },
-  {
-    id: 'pc-games',
-    name: 'PC Games',
-    slug: 'pc-games',
-    image: '/images/categories/gaming.jpg',
-    icon: 'Monitor',
-    productCount: 312,
-  },
 ];
 
 // AI Tools Categories
@@ -150,12 +97,6 @@ export const streamingCategories: Category[] = [
 // Category Groups for display
 export const categoryGroups: CategoryGroup[] = [
   {
-    id: 'gaming',
-    title: 'Gaming',
-    subtitle: 'Game top-ups, subscriptions, and in-game currency',
-    categories: gamingCategories,
-  },
-  {
     id: 'ai-tools',
     title: 'AI Tools VIP',
     subtitle: 'Premium AI subscriptions for every need',
@@ -166,70 +107,6 @@ export const categoryGroups: CategoryGroup[] = [
     title: 'Streaming & Gift Cards',
     subtitle: 'Entertainment subscriptions and digital gift cards',
     categories: streamingCategories,
-  },
-];
-
-// Gaming Products
-export const gamingProducts: Product[] = [
-  {
-    id: 'g1',
-    name: 'Steam Wallet $50',
-    description: 'Add $50 to your Steam Wallet instantly',
-    price: 45.99,
-    originalPrice: 50.00,
-    image: '/images/categories/gaming.jpg',
-    category: 'steam',
-    platform: 'Steam',
-    region: 'Global',
-    rating: 4.9,
-    reviewCount: 2847,
-    badge: '8% OFF',
-    instantDelivery: true,
-  },
-  {
-    id: 'g2',
-    name: 'Xbox Game Pass Ultimate 3 Month',
-    description: '3 months of Xbox Game Pass Ultimate',
-    price: 29.99,
-    originalPrice: 44.99,
-    image: '/images/categories/gaming.jpg',
-    category: 'xbox',
-    platform: 'Xbox',
-    region: 'Global',
-    rating: 4.8,
-    reviewCount: 1523,
-    badge: '33% OFF',
-    instantDelivery: true,
-  },
-  {
-    id: 'g3',
-    name: 'PlayStation Plus Essential 12 Month',
-    description: '12 months PlayStation Plus Essential membership',
-    price: 59.99,
-    originalPrice: 79.99,
-    image: '/images/categories/gaming.jpg',
-    category: 'playstation',
-    platform: 'PlayStation',
-    region: 'Global',
-    rating: 4.7,
-    reviewCount: 2104,
-    badge: '25% OFF',
-    instantDelivery: true,
-  },
-  {
-    id: 'g4',
-    name: 'Genshin Impact Genesis Crystals 6480',
-    description: '6480 Genesis Crystals for Genshin Impact',
-    price: 99.99,
-    originalPrice: 109.99,
-    image: '/images/categories/mobile-games.jpg',
-    category: 'mobile-games',
-    platform: 'Mobile',
-    region: 'Global',
-    rating: 4.8,
-    reviewCount: 1567,
-    badge: '9% OFF',
-    instantDelivery: true,
   },
 ];
 
@@ -673,7 +550,6 @@ export const streamingProducts: Product[] = [
 
 // All featured products (for homepage)
 export const featuredProducts: Product[] = [
-  ...gamingProducts,
   ...aiChatSearchProducts.slice(0, 2),
   ...aiImageDesignProducts.slice(0, 2),
   ...streamingProducts.slice(0, 2),
@@ -681,7 +557,6 @@ export const featuredProducts: Product[] = [
 
 // All products
 export const products: Product[] = [
-  ...gamingProducts,
   ...aiToolsProducts,
   ...streamingProducts,
 ];
