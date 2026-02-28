@@ -1,4 +1,4 @@
-import type { Product, Category, CategoryGroup, Testimonial, PaymentMethod, NavItem } from '@/types';
+import type { Product, CategoryGroup, Testimonial, PaymentMethod, NavItem } from '@/types';
 
 // ─── Navigation ─────────────────────────────────────────────────────────────
 export const navItems: NavItem[] = [
