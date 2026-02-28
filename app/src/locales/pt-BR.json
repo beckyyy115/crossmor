@@ -91,5 +91,48 @@
     "products": "Produtos",
     "support": "Suporte",
     "legal": "Legal"
+  },
+  "legal": {
+    "disclaimer": {
+      "title": "Aviso legal",
+      "sections": [
+        {
+          "title": "Prioridade do idioma",
+          "paragraphs": [
+            "Este documento pode ser fornecido em vários idiomas para conveniência.",
+            "Em caso de qualquer inconsistência ou conflito entre a versão em inglês e qualquer versão traduzida, a versão em inglês prevalecerá."
+          ]
+        },
+        {
+          "title": "Natureza dos bens digitais",
+          "paragraphs": [
+            "Todos os produtos vendidos nesta plataforma são bens digitais entregues eletronicamente.",
+            "Nenhum bem físico é enviado, a menos que explicitamente indicado."
+          ]
+        },
+        {
+          "title": "Status de Merchant of Record",
+          "paragraphs": [
+            "A Crossmor atua como Merchant of Record para transações processadas neste site.",
+            "Processamento de pagamentos, tratamento de reembolsos e conformidade regulatória são geridos de acordo com as leis aplicáveis."
+          ]
+        },
+        {
+          "title": "Plataformas de terceiros",
+          "paragraphs": [
+            "Alguns produtos concedem acesso a serviços ou plataformas de terceiros.",
+            "Não somos afiliados a marcas de terceiros, a menos que explicitamente indicado.",
+            "O uso de serviços de terceiros está sujeito aos seus respectivos termos e políticas."
+          ]
+        },
+        {
+          "title": "Limitação de disponibilidade regional",
+          "paragraphs": [
+            "Certos produtos ou métodos de pagamento podem não estar disponíveis em todas as jurisdições.",
+            "É responsabilidade do cliente garantir a conformidade com as leis locais antes de realizar uma compra."
+          ]
+        }
+      ]
+    }
   }
 }

@@ -4,6 +4,7 @@ import { ShieldCheck, Lock, AlertTriangle, ArrowRight } from 'lucide-react';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { LegalDisclaimer } from '@/components/LegalDisclaimer';
 
 export function ComplianceCenter() {
   const { t } = useTranslation();
@@ -70,6 +71,8 @@ export function ComplianceCenter() {
             </Button>
           </div>
         </div>
+
+        <LegalDisclaimer />
       </div>
     </div>
   );

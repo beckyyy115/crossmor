@@ -48,5 +48,48 @@
     "products": "Produk",
     "support": "Dukungan",
     "legal": "Legal"
+  },
+  "legal": {
+    "disclaimer": {
+      "title": "Penafian hukum",
+      "sections": [
+        {
+          "title": "Prioritas bahasa",
+          "paragraphs": [
+            "Dokumen ini dapat disediakan dalam berbagai bahasa untuk kenyamanan.",
+            "Jika terdapat ketidaksesuaian atau konflik antara versi bahasa Inggris dan versi terjemahan, versi bahasa Inggris yang berlaku."
+          ]
+        },
+        {
+          "title": "Sifat barang digital",
+          "paragraphs": [
+            "Semua produk yang dijual di platform ini adalah barang digital yang dikirim secara elektronik.",
+            "Tidak ada barang fisik yang dikirim kecuali dinyatakan secara eksplisit."
+          ]
+        },
+        {
+          "title": "Status Merchant of Record",
+          "paragraphs": [
+            "Crossmor bertindak sebagai Merchant of Record untuk transaksi yang diproses di situs web ini.",
+            "Pemrosesan pembayaran, penanganan pengembalian dana, dan kepatuhan regulasi dikelola sesuai hukum yang berlaku."
+          ]
+        },
+        {
+          "title": "Platform pihak ketiga",
+          "paragraphs": [
+            "Beberapa produk memberikan akses ke layanan atau platform pihak ketiga.",
+            "Kami tidak berafiliasi dengan merek pihak ketiga kecuali dinyatakan secara eksplisit.",
+            "Penggunaan layanan pihak ketiga tunduk pada ketentuan dan kebijakan masing-masing."
+          ]
+        },
+        {
+          "title": "Batasan ketersediaan regional",
+          "paragraphs": [
+            "Produk atau metode pembayaran tertentu mungkin tidak tersedia di semua yurisdiksi.",
+            "Merupakan tanggung jawab pelanggan untuk memastikan kepatuhan terhadap hukum setempat sebelum melakukan pembelian."
+          ]
+        }
+      ]
+    }
   }
 }

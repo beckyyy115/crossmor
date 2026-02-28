@@ -342,5 +342,48 @@
     "notFoundHint": "If you just created a demo order, copy the ID from the confirmation toast or check \"Recent demo orders\" below.",
     "contactSupport": "Contact support",
     "view": "View"
+  },
+  "legal": {
+    "disclaimer": {
+      "title": "Legal Disclaimer",
+      "sections": [
+        {
+          "title": "Language Priority",
+          "paragraphs": [
+            "This document may be provided in multiple languages for convenience.",
+            "In the event of any inconsistency or conflict between the English version and any translated version, the English version shall prevail."
+          ]
+        },
+        {
+          "title": "Digital Goods Nature",
+          "paragraphs": [
+            "All products sold on this platform are digital goods delivered electronically.",
+            "No physical goods are shipped unless explicitly stated."
+          ]
+        },
+        {
+          "title": "Merchant of Record Status",
+          "paragraphs": [
+            "Crossmor acts as the Merchant of Record for transactions processed on this website.",
+            "Payment processing, refund handling, and regulatory compliance are managed in accordance with applicable laws."
+          ]
+        },
+        {
+          "title": "Third-Party Platforms",
+          "paragraphs": [
+            "Some products grant access to third-party services or platforms.",
+            "We are not affiliated with third-party brands unless explicitly stated.",
+            "Use of third-party services is subject to their respective terms and policies."
+          ]
+        },
+        {
+          "title": "Limitation of Regional Availability",
+          "paragraphs": [
+            "Certain products or payment methods may not be available in all jurisdictions.",
+            "It is the customer's responsibility to ensure compliance with local laws before making a purchase."
+          ]
+        }
+      ]
+    }
   }
 }

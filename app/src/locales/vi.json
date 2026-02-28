@@ -171,5 +171,48 @@
     "restrictedContent": "Nội dung hạn chế",
     "restrictedContentDesc": "Chúng tôi chặn mặt hàng bị cấm và danh mục rủi ro cao theo quy tắc bên xử lý thanh toán.",
     "dueDiligence": "Thẩm tra đối tác"
+  },
+  "legal": {
+    "disclaimer": {
+      "title": "Tuyên bố pháp lý",
+      "sections": [
+        {
+          "title": "Ưu tiên ngôn ngữ",
+          "paragraphs": [
+            "Tài liệu này có thể được cung cấp bằng nhiều ngôn ngữ để tiện tra cứu.",
+            "Trong trường hợp có bất kỳ mâu thuẫn hoặc xung đột nào giữa bản tiếng Anh và bản dịch, bản tiếng Anh có hiệu lực."
+          ]
+        },
+        {
+          "title": "Bản chất hàng hóa số",
+          "paragraphs": [
+            "Tất cả sản phẩm bán trên nền tảng này là hàng hóa số được giao điện tử.",
+            "Không có hàng hóa vật lý được gửi trừ khi được nêu rõ."
+          ]
+        },
+        {
+          "title": "Tư cách Merchant of Record",
+          "paragraphs": [
+            "Crossmor đóng vai trò Merchant of Record cho các giao dịch được xử lý trên trang web này.",
+            "Xử lý thanh toán, xử lý hoàn tiền và tuân thủ quy định được quản lý theo luật hiện hành."
+          ]
+        },
+        {
+          "title": "Nền tảng bên thứ ba",
+          "paragraphs": [
+            "Một số sản phẩm cấp quyền truy cập dịch vụ hoặc nền tảng bên thứ ba.",
+            "Chúng tôi không liên kết với thương hiệu bên thứ ba trừ khi được nêu rõ.",
+            "Việc sử dụng dịch vụ bên thứ ba phải tuân theo điều khoản và chính sách tương ứng của họ."
+          ]
+        },
+        {
+          "title": "Giới hạn khả năng cung cấp theo khu vực",
+          "paragraphs": [
+            "Một số sản phẩm hoặc phương thức thanh toán có thể không có ở mọi khu vực pháp lý.",
+            "Khách hàng có trách nhiệm đảm bảo tuân thủ luật địa phương trước khi mua."
+          ]
+        }
+      ]
+    }
   }
 }

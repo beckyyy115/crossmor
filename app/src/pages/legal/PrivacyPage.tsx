@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
+import { LegalDisclaimer } from '@/components/LegalDisclaimer';
 
 export function PrivacyPage() {
   const { t } = useTranslation();
@@ -143,6 +144,8 @@ export function PrivacyPage() {
             <Link to="/contact">{t('privacy.contactBtn')}</Link>
           </Button>
         </div>
+
+        <LegalDisclaimer />
       </div>
     </div>
   );
