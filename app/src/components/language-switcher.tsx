@@ -22,8 +22,13 @@ export function LanguageSwitcher() {
       setOpen(false);
       return;
     }
-    await loadLocale(code);
-    await i18n.changeLanguage(code);
+    try {
+      await loadLocale(code);
+      await i18n.changeLanguage(code);
+    } catch (_) {
+      if (import.meta.env.DEV) console.warn('[LanguageSwitcher] Failed to switch language, staying on', i18n.language);
+      await i18n.changeLanguage('en');
+    }
     setOpen(false);
   };
 

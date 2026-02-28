@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Search, ArrowRight } from 'lucide-react';
 
@@ -11,6 +12,7 @@ import { categoryGroups, featuredProducts } from '@/lib/data';
 import { allProducts } from '@/lib/store';
 
 export function StoreHome() {
+  const { t } = useTranslation();
   const [q, setQ] = useState('');
 
   const results = useMemo(() => {
@@ -31,10 +33,9 @@ export function StoreHome() {
       <section className="pt-28 pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="max-w-3xl">
-            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Store</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">{t('store.title')}</h1>
             <p className="text-muted-foreground">
-              Browse categories, compare regional options, and place demo orders. This storefront is designed to help
-              partners verify our MOR operating model (product catalog → checkout → order tracking → support).
+              {t('store.subtitle')}
             </p>
           </ScrollReveal>
 
@@ -44,12 +45,12 @@ export function StoreHome() {
               <Input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                placeholder="Search products (ChatGPT, Netflix, region…)"
+                placeholder={t('store.searchPlaceholder')}
                 className="pl-9 bg-surface-1 border-border"
               />
             </div>
             <Button asChild className="bg-gradient-primary text-white border-0 hover:opacity-90">
-              <Link to="/cart">Go to Cart</Link>
+              <Link to="/cart">{t('store.goToCart')}</Link>
             </Button>
           </div>
         </div>
@@ -60,9 +61,9 @@ export function StoreHome() {
         <section className="pb-14">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-xl font-semibold">Search results</h2>
+              <h2 className="text-xl font-semibold">{t('store.searchResults')}</h2>
               <Button variant="ghost" className="text-primary hover:bg-primary/10" onClick={() => setQ('')}>
-                Clear
+                {t('store.clear')}
               </Button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -81,12 +82,16 @@ export function StoreHome() {
             <div key={group.id}>
               <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">{group.title}</h2>
-                  <p className="text-muted-foreground">{group.subtitle}</p>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
+                    {group.labelKey ? t(`nav.${group.labelKey}`) : group.title}
+                  </h2>
+                  <p className="text-muted-foreground">
+                    {t(`categories.subtitle_${group.id.replace(/-/g, '_')}`, { defaultValue: group.subtitle })}
+                  </p>
                 </div>
                 <Button asChild variant="ghost" className="text-primary hover:bg-primary/10">
                   <Link to={`/store/group/${group.id}`} className="inline-flex items-center">
-                    View all
+                    {t('store.viewAll')}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
@@ -106,8 +111,8 @@ export function StoreHome() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Trending</h2>
-              <p className="text-muted-foreground">Popular items from our catalog</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">{t('store.trending')}</h2>
+              <p className="text-muted-foreground">{t('store.trendingSubtitle')}</p>
             </div>
           </div>
 

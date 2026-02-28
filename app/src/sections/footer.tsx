@@ -46,8 +46,7 @@ export function Footer() {
               <span className="text-xl font-bold text-foreground">CrossMor</span>
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Your trusted Merchant of Record for digital goods. We handle payments, 
-              taxes, and compliance so you can focus on what matters.
+              {t('footer.tagline')}
             </p>
 
             {/* Social Links */}

@@ -1,12 +1,4 @@
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-  type ReactNode,
-} from 'react';
+import { createContext, useContext, useMemo, type ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getActiveCategoryIdFromPath } from '@/lib/nav-utils';
 
@@ -19,23 +11,20 @@ type ActiveCategoryContextValue = {
 
 const ActiveCategoryContext = createContext<ActiveCategoryContextValue | null>(null);
 
+/** Single source of truth: activeCategory is derived from pathname only (no state). */
 export function ActiveCategoryProvider({ children }: { children: ReactNode }) {
   const { pathname } = useLocation();
-  const [activeCategory, setActiveCategoryState] = useState<string>(DEFAULT_CATEGORY_ID);
-
-  useEffect(() => {
-    const next =
-      getActiveCategoryIdFromPath(pathname) ?? (pathname === '/store' ? 'deals' : null) ?? DEFAULT_CATEGORY_ID;
-    setActiveCategoryState(next);
-  }, [pathname]);
-
-  const setActiveCategory = useCallback((id: string) => {
-    setActiveCategoryState(id);
-  }, []);
+  const activeCategory =
+    getActiveCategoryIdFromPath(pathname) ??
+    (pathname === '/store' ? 'deals' : null) ??
+    DEFAULT_CATEGORY_ID;
 
   const value = useMemo(
-    () => ({ activeCategory, setActiveCategory }),
-    [activeCategory, setActiveCategory],
+    () => ({
+      activeCategory,
+      setActiveCategory: () => {},
+    }),
+    [activeCategory],
   );
 
   return (

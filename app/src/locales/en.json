@@ -78,6 +78,7 @@
     "subtitle_regional_services": "Local OTT, streaming vouchers, and wallet top-ups"
   },
   "footer": {
+    "tagline": "Your trusted Merchant of Record for digital goods. We handle payments, taxes, and compliance so you can focus on what matters.",
     "aiSubscriptions": "AI Subscriptions",
     "giftCards": "Gift Cards",
     "softwareLicenses": "Software Licenses",
@@ -92,5 +93,38 @@
     "products": "Products",
     "support": "Support",
     "legal": "Legal"
+  },
+  "store": {
+    "title": "Store",
+    "subtitle": "Browse categories, compare regional options, and place demo orders. This storefront is designed to help partners verify our MOR operating model.",
+    "searchPlaceholder": "Search products (ChatGPT, Netflix, region…)",
+    "goToCart": "Go to Cart",
+    "searchResults": "Search results",
+    "clear": "Clear",
+    "viewAll": "View all",
+    "trending": "Trending",
+    "trendingSubtitle": "Popular items from our catalog"
+  },
+  "storeGroup": {
+    "groupNotFound": "Group not found",
+    "groupNotFoundHint": "Please return to the store and choose a category.",
+    "backToStore": "Back to Store"
+  },
+  "storeCategory": {
+    "categoryNotFound": "Category not found",
+    "categoryNotFoundHint": "Please return to the store and choose a category.",
+    "subtitle": "Instant delivery digital goods · MOR checkout · Regional options",
+    "filterSort": "Filter & sort",
+    "filterPlatform": "Platform",
+    "filterRegion": "Region",
+    "sortBy": "Sort by",
+    "all": "All",
+    "allPlatforms": "All platforms",
+    "allRegions": "All regions",
+    "mostPopular": "Most popular",
+    "highestRating": "Highest rating",
+    "priceLowToHigh": "Price: low to high",
+    "priceHighToLow": "Price: high to low",
+    "itemsCount": "{{count}} items"
   }
 }

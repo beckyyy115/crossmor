@@ -43,5 +43,54 @@
     "subtitle_software_saas": "Phần mềm năng suất và sáng tạo",
     "subtitle_regional_services": "OTT địa phương, voucher streaming và ví"
   },
-  "footer": {}
+  "footer": {
+    "tagline": "Đối tác Merchant of Record tin cậy cho hàng kỹ thuật số. Chúng tôi xử lý thanh toán, thuế và tuân thủ để bạn tập trung vào điều quan trọng.",
+    "aiSubscriptions": "Gói AI",
+    "giftCards": "Thẻ quà",
+    "softwareLicenses": "Phần mềm",
+    "helpCenter": "Trung tâm trợ giúp",
+    "contactUs": "Liên hệ",
+    "trackOrder": "Tra cứu đơn",
+    "refundPolicy": "Chính sách hoàn tiền",
+    "termsOfService": "Điều khoản",
+    "privacyPolicy": "Quyền riêng tư",
+    "cookiePolicy": "Cookie",
+    "compliance": "Tuân thủ",
+    "products": "Sản phẩm",
+    "support": "Hỗ trợ",
+    "legal": "Pháp lý"
+  },
+  "store": {
+    "title": "Cửa hàng",
+    "subtitle": "Duyệt danh mục, so sánh theo khu vực và đặt đơn demo.",
+    "searchPlaceholder": "Tìm sản phẩm (ChatGPT, Netflix…)",
+    "goToCart": "Vào giỏ",
+    "searchResults": "Kết quả tìm kiếm",
+    "clear": "Xóa",
+    "viewAll": "Xem tất cả",
+    "trending": "Phổ biến",
+    "trendingSubtitle": "Sản phẩm nổi bật"
+  },
+  "storeGroup": {
+    "groupNotFound": "Không tìm thấy nhóm",
+    "groupNotFoundHint": "Vui lòng quay lại cửa hàng và chọn danh mục.",
+    "backToStore": "Về cửa hàng"
+  },
+  "storeCategory": {
+    "categoryNotFound": "Không tìm thấy danh mục",
+    "categoryNotFoundHint": "Vui lòng quay lại cửa hàng và chọn danh mục.",
+    "subtitle": "Hàng kỹ thuật số giao ngay · Thanh toán MOR · Tùy chọn theo khu vực",
+    "filterSort": "Lọc & sắp xếp",
+    "filterPlatform": "Nền tảng",
+    "filterRegion": "Khu vực",
+    "sortBy": "Sắp xếp",
+    "all": "Tất cả",
+    "allPlatforms": "Tất cả nền tảng",
+    "allRegions": "Tất cả khu vực",
+    "mostPopular": "Phổ biến nhất",
+    "highestRating": "Đánh giá cao nhất",
+    "priceLowToHigh": "Giá: thấp đến cao",
+    "priceHighToLow": "Giá: cao đến thấp",
+    "itemsCount": "{{count}} sản phẩm"
+  }
 }

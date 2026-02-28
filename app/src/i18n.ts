@@ -29,9 +29,15 @@ export async function loadLocale(lang: string): Promise<void> {
   if (resources[lang]) return;
   const loader = localeModules[lang];
   if (!loader) return;
-  const mod = await loader();
-  resources[lang] = { translation: mod.default };
-  i18n.addResourceBundle(lang, 'translation', mod.default);
+  try {
+    const mod = await loader();
+    const bundle = mod?.default;
+    if (!bundle || typeof bundle !== 'object' || Array.isArray(bundle)) return;
+    resources[lang] = { translation: bundle as TranslationResource };
+    i18n.addResourceBundle(lang, 'translation', bundle);
+  } catch (_) {
+    if (import.meta.env.DEV) console.warn(`[i18n] Failed to load locale: ${lang}`);
+  }
 }
 
 const saved = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
@@ -44,7 +50,6 @@ i18n.use(initReactI18next).init({
   defaultNS: 'translation',
   interpolation: { escapeValue: false },
   react: { useSuspense: true },
-  // Missing keys in current language fall back to English
   saveMissing: false,
 });
 

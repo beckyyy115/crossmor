@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowLeft } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -6,6 +7,7 @@ import { CategoryCard } from '@/components/category-card';
 import { getGroup } from '@/lib/store';
 
 export function StoreGroup() {
+  const { t } = useTranslation();
   const { groupId } = useParams();
   const group = groupId ? getGroup(groupId) : undefined;
 
@@ -13,20 +15,22 @@ export function StoreGroup() {
     return (
       <div className="pt-28 pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl font-bold mb-2">Group not found</h1>
-          <p className="text-muted-foreground mb-6">Please return to the store and choose a category.</p>
+          <h1 className="text-2xl font-bold mb-2">{t('storeGroup.groupNotFound')}</h1>
+          <p className="text-muted-foreground mb-6">{t('storeGroup.groupNotFoundHint')}</p>
           <Button asChild className="bg-gradient-primary text-white border-0">
-            <Link to="/store">Back to Store</Link>
+            <Link to="/store">{t('storeGroup.backToStore')}</Link>
           </Button>
         </div>
       </div>
     );
   }
 
+  const groupTitle = group.labelKey ? t(`nav.${group.labelKey}`) : group.title;
+  const groupSubtitle = group.id ? t(`categories.subtitle_${group.id.replace(/-/g, '_')}`, { defaultValue: group.subtitle }) : group.subtitle;
+
   return (
     <div className="pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Category hero image */}
         {group.image && (
           <div className="relative h-40 sm:h-48 rounded-2xl overflow-hidden mb-10 bg-surface-2">
             <img
@@ -39,12 +43,12 @@ export function StoreGroup() {
         )}
         <div className="flex items-center justify-between gap-4 mb-10">
           <div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">{group.title}</h1>
-            <p className="text-muted-foreground">{group.subtitle}</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">{groupTitle}</h1>
+            <p className="text-muted-foreground">{groupSubtitle}</p>
           </div>
           <Button asChild variant="outline" className="border-border bg-surface-1">
             <Link to="/store" className="inline-flex items-center">
-              <ArrowLeft className="w-4 h-4 mr-2" /> Back
+              <ArrowLeft className="w-4 h-4 mr-2" /> {t('common.back')}
             </Link>
           </Button>
         </div>
