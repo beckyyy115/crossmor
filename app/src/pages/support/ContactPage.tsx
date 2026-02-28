@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Mail, MessageCircle, Send, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
@@ -9,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { ScrollReveal } from '@/components/scroll-reveal';
 
 export function ContactSection() {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
@@ -24,13 +26,13 @@ export function ContactSection() {
       });
 
       if (response.ok) {
-        toast.success('Message sent!', { description: 'We will get back to you shortly.' });
+        toast.success(t('contact.toastSuccess'), { description: t('contact.toastSuccessDesc') });
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         throw new Error('Failed to send message');
       }
     } catch {
-      toast.error('Something went wrong', { description: 'Please try again later.' });
+      toast.error(t('contact.toastError'), { description: t('contact.toastErrorDesc') });
     } finally {
       setIsSubmitting(false);
     }
@@ -40,9 +42,9 @@ export function ContactSection() {
     <section id="contact" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Contact Us</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">{t('contact.title')}</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Questions about MOR setup, settlement, or supported regions? Reach us via email or Telegram.
+            {t('contact.subtitle')}
           </p>
         </ScrollReveal>
 
@@ -50,8 +52,8 @@ export function ContactSection() {
           <ScrollReveal direction="left">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">Get in touch</h3>
-                <p className="text-muted-foreground mb-6">We respond within 24 hours on business days.</p>
+                <h3 className="text-2xl font-bold text-foreground mb-4">{t('contact.getInTouch')}</h3>
+                <p className="text-muted-foreground mb-6">{t('contact.respondTime')}</p>
               </div>
 
               <div className="space-y-6">
@@ -64,7 +66,7 @@ export function ContactSection() {
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Email Support</div>
+                    <div className="font-semibold text-foreground">{t('contact.emailSupport')}</div>
                     <div className="text-muted-foreground">service@crossmor.com</div>
                   </div>
                 </motion.a>
@@ -80,7 +82,7 @@ export function ContactSection() {
                     <MessageCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Telegram</div>
+                    <div className="font-semibold text-foreground">{t('contact.telegram')}</div>
                     <div className="text-muted-foreground">https://t.me/crosspay_official</div>
                   </div>
                 </motion.a>
@@ -90,27 +92,27 @@ export function ContactSection() {
 
           <ScrollReveal direction="right">
             <div className="bg-surface-1 rounded-2xl border border-border p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Send us a message</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">{t('contact.sendMessage')}</h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Name</label>
+                    <label className="block text-sm font-medium text-foreground mb-2">{t('contact.name')}</label>
                     <Input
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Your name"
+                      placeholder={t('contact.namePlaceholder')}
                       required
                       className="bg-background border-border"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Email</label>
+                    <label className="block text-sm font-medium text-foreground mb-2">{t('contact.email')}</label>
                     <Input
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="you@company.com"
+                      placeholder={t('contact.emailPlaceholder')}
                       required
                       className="bg-background border-border"
                     />
@@ -118,22 +120,22 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Subject</label>
+                  <label className="block text-sm font-medium text-foreground mb-2">{t('contact.subject')}</label>
                   <Input
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    placeholder="How can we help?"
+                    placeholder={t('contact.subjectPlaceholder')}
                     required
                     className="bg-background border-border"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Message</label>
+                  <label className="block text-sm font-medium text-foreground mb-2">{t('contact.message')}</label>
                   <Textarea
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your product, target regions, and what you need (Payin / Payout / MOR)…"
+                    placeholder={t('contact.messagePlaceholder')}
                     required
                     rows={5}
                     className="bg-background border-border resize-none"
@@ -148,12 +150,12 @@ export function ContactSection() {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                      Sending...
+                      {t('contact.sending')}
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5 mr-2" />
-                      Send Message
+                      {t('contact.sendButton')}
                     </>
                   )}
                 </Button>

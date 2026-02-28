@@ -126,5 +126,84 @@
     "priceLowToHigh": "Price: low to high",
     "priceHighToLow": "Price: high to low",
     "itemsCount": "{{count}} items"
+  },
+  "help": {
+    "title": "Help Center",
+    "subtitle": "Quick answers for partners and customers. For live support, go to Contact.",
+    "delivery": "Delivery",
+    "deliveryDesc": "Instant delivery for most SKUs.",
+    "security": "Security",
+    "securityDesc": "Fraud & compliance screening built in.",
+    "receipts": "Receipts",
+    "receiptsDesc": "Receipts issued by CrossMor as MOR.",
+    "support": "Support",
+    "supportDesc": "Track orders and contact us anytime.",
+    "faq": "FAQ",
+    "faq1q": "How fast is delivery?",
+    "faq1a": "Most items are delivered instantly after order confirmation. Some high-risk regions or large orders may require manual review.",
+    "faq2q": "What does \"Merchant of Record\" mean?",
+    "faq2a": "CrossMor is the seller on record for these digital products. We accept payment, handle compliance screening and support, and issue receipts.",
+    "faq3q": "Can I get a refund?",
+    "faq3a": "Refund eligibility depends on the product type and whether a code was delivered/redeemed. See Refund Policy for details.",
+    "faq4q": "My payment failed — what should I do?",
+    "faq4a": "Try another payment method or contact support with your order ID. We can help diagnose bank/issuer declines vs. risk screening.",
+    "trackOrder": "Track an order",
+    "refundPolicy": "Refund policy",
+    "contactSupport": "Contact support"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: February 18, 2026"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: February 18, 2026"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Questions about MOR setup, settlement, or supported regions? Reach us via email or Telegram.",
+    "getInTouch": "Get in touch",
+    "respondTime": "We respond within 24 hours on business days.",
+    "emailSupport": "Email Support",
+    "telegram": "Telegram",
+    "sendMessage": "Send us a message",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "How can we help?",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your product, target regions, and what you need (Payin / Payout / MOR)…",
+    "sending": "Sending...",
+    "sendButton": "Send Message",
+    "toastSuccess": "Message sent!",
+    "toastSuccessDesc": "We will get back to you shortly.",
+    "toastError": "Something went wrong",
+    "toastErrorDesc": "Please try again later."
+  },
+  "refund": {
+    "title": "Refund Policy",
+    "subtitle": "This is a demo policy page for partner review. Real production policy must be tailored by jurisdiction and SKU.",
+    "digitalDifferent": "Digital products are different",
+    "digitalDifferentDesc": "Many digital goods (keys, codes, top-ups) become non-refundable once delivered or redeemed. We still support refunds for duplicate charges, non-delivery, and clear product mismatches.",
+    "eligibleTitle": "Eligible refund cases",
+    "notEligibleTitle": "Not eligible (typical)",
+    "howToTitle": "How to request a refund"
+  },
+  "cookie": {
+    "title": "Cookie Policy",
+    "lastUpdated": "Last Updated: February 18, 2026"
+  },
+  "compliance": {
+    "title": "Compliance",
+    "subtitle": "High-level compliance overview for partner review. Replace with your verified controls, policies, and entity details.",
+    "fraudScreening": "Fraud Screening",
+    "fraudScreeningDesc": "Automated and manual reviews for unusual orders, high-risk regions, and velocity anomalies.",
+    "dataProtection": "Data Protection",
+    "dataProtectionDesc": "Least-privilege access, secure storage, and vendor controls for payment processing.",
+    "restrictedContent": "Restricted Content",
+    "restrictedContentDesc": "We block prohibited items and high-risk categories per payment processor rules.",
+    "dueDiligence": "Partner due diligence"
   }
 }

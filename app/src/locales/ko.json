@@ -29,5 +29,10 @@
     "ctaPrimary": "AI 도구 보기",
     "ctaSecondary": "스트리밍 및 카드"
   },
-  "footer": {}
+  "footer": {
+    "tagline": "디지털 상품을 위한 신뢰할 수 있는 Merchant of Record. 결제, 세금, 규정 준수를 처리하여 중요한 일에 집중하실 수 있습니다.",
+    "products": "제품",
+    "support": "지원",
+    "legal": "법적 고지"
+  }
 }

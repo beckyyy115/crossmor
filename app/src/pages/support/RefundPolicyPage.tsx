@@ -1,33 +1,34 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { AlertTriangle } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export function RefundPolicyPage() {
+  const { t } = useTranslation();
   return (
     <div className="pt-28 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Refund Policy</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">{t('refund.title')}</h1>
         <p className="text-muted-foreground mb-8">
-          This is a demo policy page for partner review. Real production policy must be tailored by jurisdiction and SKU.
+          {t('refund.subtitle')}
         </p>
 
         <Card className="bg-surface-1 border-border mb-6">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <AlertTriangle className="w-5 h-5 text-primary" /> Digital products are different
+              <AlertTriangle className="w-5 h-5 text-primary" /> {t('refund.digitalDifferent')}
             </CardTitle>
           </CardHeader>
           <CardContent className="text-muted-foreground">
-            Many digital goods (keys, codes, top-ups) become non-refundable once delivered or redeemed. We still support
-            refunds for duplicate charges, non-delivery, and clear product mismatches.
+            {t('refund.digitalDifferentDesc')}
           </CardContent>
         </Card>
 
         <div className="bg-surface-1 border border-border rounded-2xl p-8 space-y-6">
           <section>
-            <h2 className="text-xl font-semibold mb-2">Eligible refund cases</h2>
+            <h2 className="text-xl font-semibold mb-2">{t('refund.eligibleTitle')}</h2>
             <ul className="list-disc pl-5 text-muted-foreground space-y-1">
               <li>Duplicate or accidental double charges</li>
               <li>Code not delivered within the stated timeframe</li>
@@ -37,7 +38,7 @@ export function RefundPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-2">Not eligible (typical)</h2>
+            <h2 className="text-xl font-semibold mb-2">{t('refund.notEligibleTitle')}</h2>
             <ul className="list-disc pl-5 text-muted-foreground space-y-1">
               <li>Code delivered and redeemed successfully</li>
               <li>Wrong purchase made by customer (e.g., wrong platform)</li>
@@ -46,7 +47,7 @@ export function RefundPolicyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold mb-2">How to request a refund</h2>
+            <h2 className="text-xl font-semibold mb-2">{t('refund.howToTitle')}</h2>
             <p className="text-muted-foreground">
               Contact support with your order ID, purchase email, and a screenshot (if relevant). We typically respond within
               24 hours on business days.

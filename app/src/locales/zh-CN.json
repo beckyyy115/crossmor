@@ -76,6 +76,7 @@
     "subtitle_regional_services": "本地 OTT、流媒体券与钱包"
   },
   "footer": {
+    "tagline": "您可信赖的数字商品 Merchant of Record。我们处理支付、税务与合规，您专注重要事务。",
     "aiSubscriptions": "AI 订阅",
     "giftCards": "礼品卡",
     "softwareLicenses": "软件许可",
@@ -90,5 +91,84 @@
     "products": "产品",
     "support": "支持",
     "legal": "法律"
+  },
+  "help": {
+    "title": "帮助中心",
+    "subtitle": "为合作伙伴与客户提供快速解答。需要实时支持请前往联系我们。",
+    "delivery": "配送",
+    "deliveryDesc": "多数 SKU 即时配送。",
+    "security": "安全",
+    "securityDesc": "内置反欺诈与合规审核。",
+    "receipts": "发票",
+    "receiptsDesc": "由 CrossMor 作为 MOR 开具发票。",
+    "support": "支持",
+    "supportDesc": "随时查询订单或联系我们。",
+    "faq": "常见问题",
+    "faq1q": "配送有多快？",
+    "faq1a": "多数商品在订单确认后即时送达。部分高风险地区或大额订单可能需人工审核。",
+    "faq2q": "什么是「Merchant of Record」？",
+    "faq2a": "CrossMor 是这些数字产品的记录在案销售方，负责收款、合规审核与支持并开具发票。",
+    "faq3q": "可以退款吗？",
+    "faq3a": "是否可退款取决于产品类型及是否已交付/兑换码。详见退款政策。",
+    "faq4q": "支付失败怎么办？",
+    "faq4a": "请尝试其他支付方式或凭订单号联系客服，我们会协助区分银行/发卡方拒绝与风控审核。",
+    "trackOrder": "查询订单",
+    "refundPolicy": "退款政策",
+    "contactSupport": "联系支持"
+  },
+  "terms": {
+    "title": "服务条款",
+    "lastUpdated": "最后更新：2026年2月18日"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：2026年2月18日"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "关于 MOR 配置、结算或支持地区有疑问？请通过邮件或 Telegram 联系我们。",
+    "getInTouch": "取得联系",
+    "respondTime": "工作日内 24 小时内回复。",
+    "emailSupport": "邮件支持",
+    "telegram": "Telegram",
+    "sendMessage": "给我们留言",
+    "name": "姓名",
+    "namePlaceholder": "您的姓名",
+    "email": "邮箱",
+    "emailPlaceholder": "you@company.com",
+    "subject": "主题",
+    "subjectPlaceholder": "需要什么帮助？",
+    "message": "留言",
+    "messagePlaceholder": "请说明您的产品、目标地区与需求（Payin / Payout / MOR）…",
+    "sending": "发送中...",
+    "sendButton": "发送消息",
+    "toastSuccess": "消息已发送！",
+    "toastSuccessDesc": "我们会尽快回复。",
+    "toastError": "出错了",
+    "toastErrorDesc": "请稍后重试。"
+  },
+  "refund": {
+    "title": "退款政策",
+    "subtitle": "此为供合作伙伴查阅的示例政策页，正式政策须按司法辖区与 SKU 定制。",
+    "digitalDifferent": "数字产品有所不同",
+    "digitalDifferentDesc": "许多数字商品（密钥、兑换码、充值）一经交付或兑换即不可退款。我们仍支持重复扣款、未交付及明显发错货的退款。",
+    "eligibleTitle": "符合退款的情况",
+    "notEligibleTitle": "通常不符合退款",
+    "howToTitle": "如何申请退款"
+  },
+  "cookie": {
+    "title": "Cookie 政策",
+    "lastUpdated": "最后更新：2026年2月18日"
+  },
+  "compliance": {
+    "title": "合规",
+    "subtitle": "供合作伙伴查阅的合规概览，请替换为您已核实的控制措施、政策与实体信息。",
+    "fraudScreening": "反欺诈审核",
+    "fraudScreeningDesc": "对异常订单、高风险地区与频次异常进行自动与人工审核。",
+    "dataProtection": "数据保护",
+    "dataProtectionDesc": "最小权限访问、安全存储及支付处理相关的供应商控制。",
+    "restrictedContent": "受限内容",
+    "restrictedContentDesc": "我们按支付处理方规则屏蔽禁止品类与高风险类别。",
+    "dueDiligence": "合作伙伴尽调"
   }
 }

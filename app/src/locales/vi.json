@@ -92,5 +92,84 @@
     "priceLowToHigh": "Giá: thấp đến cao",
     "priceHighToLow": "Giá: cao đến thấp",
     "itemsCount": "{{count}} sản phẩm"
+  },
+  "help": {
+    "title": "Trung tâm trợ giúp",
+    "subtitle": "Câu trả lời nhanh cho đối tác và khách hàng. Hỗ trợ trực tiếp, vui lòng đến Liên hệ.",
+    "delivery": "Giao hàng",
+    "deliveryDesc": "Giao ngay cho hầu hết SKU.",
+    "security": "Bảo mật",
+    "securityDesc": "Chống gian lận và tuân thủ được tích hợp sẵn.",
+    "receipts": "Hóa đơn",
+    "receiptsDesc": "Hóa đơn do CrossMor phát hành với tư cách MOR.",
+    "support": "Hỗ trợ",
+    "supportDesc": "Tra cứu đơn hàng và liên hệ bất cứ lúc nào.",
+    "faq": "Câu hỏi thường gặp",
+    "faq1q": "Giao hàng nhanh thế nào?",
+    "faq1a": "Hầu hết sản phẩm được giao ngay sau khi xác nhận đơn. Một số khu vực rủi ro cao hoặc đơn lớn có thể cần xem xét thủ công.",
+    "faq2q": "\"Merchant of Record\" nghĩa là gì?",
+    "faq2a": "CrossMor là bên bán trên hồ sơ cho các sản phẩm số này. Chúng tôi nhận thanh toán, xử lý kiểm tra tuân thủ và hỗ trợ, đồng thời phát hành hóa đơn.",
+    "faq3q": "Tôi có thể được hoàn tiền không?",
+    "faq3a": "Điều kiện hoàn tiền tùy loại sản phẩm và việc mã đã được giao/đã đổi hay chưa. Xem Chính sách hoàn tiền để biết chi tiết.",
+    "faq4q": "Thanh toán thất bại — tôi nên làm gì?",
+    "faq4a": "Thử phương thức thanh toán khác hoặc liên hệ hỗ trợ với mã đơn hàng. Chúng tôi có thể hỗ trợ chẩn đoán từ chối ngân hàng/issuer so với kiểm tra rủi ro.",
+    "trackOrder": "Tra cứu đơn hàng",
+    "refundPolicy": "Chính sách hoàn tiền",
+    "contactSupport": "Liên hệ hỗ trợ"
+  },
+  "terms": {
+    "title": "Điều khoản dịch vụ",
+    "lastUpdated": "Cập nhật lần cuối: 18 tháng 2, 2026"
+  },
+  "privacy": {
+    "title": "Chính sách bảo mật",
+    "lastUpdated": "Cập nhật lần cuối: 18 tháng 2, 2026"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Câu hỏi về thiết lập MOR, thanh toán bù trừ hoặc khu vực hỗ trợ? Liên hệ qua email hoặc Telegram.",
+    "getInTouch": "Liên hệ với chúng tôi",
+    "respondTime": "Chúng tôi phản hồi trong vòng 24 giờ trong ngày làm việc.",
+    "emailSupport": "Hỗ trợ qua Email",
+    "telegram": "Telegram",
+    "sendMessage": "Gửi tin nhắn cho chúng tôi",
+    "name": "Tên",
+    "namePlaceholder": "Tên của bạn",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "subject": "Chủ đề",
+    "subjectPlaceholder": "Chúng tôi có thể giúp gì?",
+    "message": "Tin nhắn",
+    "messagePlaceholder": "Cho chúng tôi biết về sản phẩm, khu vực mục tiêu và nhu cầu của bạn (Payin / Payout / MOR)…",
+    "sending": "Đang gửi...",
+    "sendButton": "Gửi tin nhắn",
+    "toastSuccess": "Đã gửi tin nhắn!",
+    "toastSuccessDesc": "Chúng tôi sẽ phản hồi trong thời gian sớm nhất.",
+    "toastError": "Đã xảy ra lỗi",
+    "toastErrorDesc": "Vui lòng thử lại sau."
+  },
+  "refund": {
+    "title": "Chính sách hoàn tiền",
+    "subtitle": "Đây là trang chính sách demo để đối tác xem xét. Chính sách thực tế cần được điều chỉnh theo khu vực pháp lý và SKU.",
+    "digitalDifferent": "Sản phẩm số khác biệt",
+    "digitalDifferentDesc": "Nhiều hàng số (key, mã, nạp tiền) không hoàn tiền sau khi giao hoặc đã đổi. Chúng tôi vẫn hỗ trợ hoàn tiền cho giao dịch trùng, không giao hàng và sai sản phẩm rõ ràng.",
+    "eligibleTitle": "Trường hợp được hoàn tiền",
+    "notEligibleTitle": "Không đủ điều kiện (thường gặp)",
+    "howToTitle": "Cách yêu cầu hoàn tiền"
+  },
+  "cookie": {
+    "title": "Chính sách Cookie",
+    "lastUpdated": "Cập nhật lần cuối: 18 tháng 2, 2026"
+  },
+  "compliance": {
+    "title": "Tuân thủ",
+    "subtitle": "Tổng quan tuân thủ cấp cao cho đối tác xem xét. Thay thế bằng kiểm soát, chính sách và thông tin thực thể đã xác minh của bạn.",
+    "fraudScreening": "Chống gian lận",
+    "fraudScreeningDesc": "Tự động và thủ công xem xét đơn bất thường, khu vực rủi ro cao và bất thường tốc độ.",
+    "dataProtection": "Bảo vệ dữ liệu",
+    "dataProtectionDesc": "Truy cập tối thiểu, lưu trữ an toàn và kiểm soát nhà cung cấp cho xử lý thanh toán.",
+    "restrictedContent": "Nội dung hạn chế",
+    "restrictedContentDesc": "Chúng tôi chặn mặt hàng bị cấm và danh mục rủi ro cao theo quy tắc bên xử lý thanh toán.",
+    "dueDiligence": "Thẩm tra đối tác"
   }
 }

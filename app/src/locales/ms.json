@@ -29,5 +29,10 @@
     "ctaPrimary": "Lihat AI Tools",
     "ctaSecondary": "Streaming & Kad"
   },
-  "footer": {}
+  "footer": {
+    "tagline": "Merchant of Record dipercayai anda untuk barangan digital. Kami uruskan pembayaran, cukai dan pematuhan — anda fokus pada yang penting.",
+    "products": "Produk",
+    "support": "Sokongan",
+    "legal": "Perundangan"
+  }
 }

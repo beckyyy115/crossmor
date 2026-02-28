@@ -29,5 +29,10 @@
     "ctaPrimary": "AI Tools ansehen",
     "ctaSecondary": "Streaming & Karten"
   },
-  "footer": {}
+  "footer": {
+    "tagline": "Ihr vertrauenswürdiger Merchant of Record für digitale Güter. Wir übernehmen Zahlungen, Steuern und Compliance – Sie konzentrieren sich auf das Wesentliche.",
+    "products": "Produkte",
+    "support": "Support",
+    "legal": "Rechtliches"
+  }
 }

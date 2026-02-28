@@ -29,5 +29,10 @@
     "ctaPrimary": "Ver AI Tools",
     "ctaSecondary": "Streaming y tarjetas"
   },
-  "footer": {}
+  "footer": {
+    "tagline": "Su Merchant of Record de confianza para bienes digitales. Nos encargamos de pagos, impuestos y cumplimiento para que usted se enfoque en lo importante.",
+    "products": "Productos",
+    "support": "Soporte",
+    "legal": "Legal"
+  }
 }

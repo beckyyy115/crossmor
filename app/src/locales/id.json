@@ -43,5 +43,10 @@
     "subtitle_software_saas": "Perangkat lunak produktivitas dan kreatif",
     "subtitle_regional_services": "OTT lokal, voucher streaming, dan dompet"
   },
-  "footer": {}
+  "footer": {
+    "tagline": "Merchant of Record tepercaya Anda untuk barang digital. Kami menangani pembayaran, pajak, dan kepatuhan — Anda fokus pada yang penting.",
+    "products": "Produk",
+    "support": "Dukungan",
+    "legal": "Legal"
+  }
 }
